@@ -2172,6 +2172,54 @@ strong {
   background-image: url(/assets/slides/mach-3.png);
 }
 
+.bg-\[url\(\'\/assets\/slides\/mach-3\.png\'\)\] {
+  background-image: url('/assets/slides/mach-3.png');
+}
+
+.bg-\[url\(\'\/assets\/slides\/mach-5\.png\'\)\] {
+  background-image: url('/assets/slides/mach-5.png');
+}
+
+.bg-\[url\(\'\/assets\/slides\/mach-6\.png\'\)\] {
+  background-image: url('/assets/slides/mach-6.png');
+}
+
+.bg-\[url\(\'\/assets\/slides\/mach-8\.png\'\)\] {
+  background-image: url('/assets/slides/mach-8.png');
+}
+
+.bg-\[url\(assets\/slides\/fdm-1\.png\)\] {
+  background-image: url(assets/slides/fdm-1.png);
+}
+
+.bg-\[url\(\'\/assets\/slides\/slm-6\.png\'\)\] {
+  background-image: url('/assets/slides/slm-6.png');
+}
+
+.bg-\[url\(\'\/assets\/slides\/slm-7\.png\'\)\] {
+  background-image: url('/assets/slides/slm-7.png');
+}
+
+.bg-\[url\(\'assets\/slides\/mach-5\.png\'\)\] {
+  background-image: url('assets/slides/mach-5.png');
+}
+
+.bg-\[url\(\'assets\/slides\/mach-6\.png\'\)\] {
+  background-image: url('assets/slides/mach-6.png');
+}
+
+.bg-\[url\(\'assets\/slides\/mach-8\.png\'\)\] {
+  background-image: url('assets/slides/mach-8.png');
+}
+
+.bg-\[url\(\'assets\/slides\/slm-6\.png\'\)\] {
+  background-image: url('assets/slides/slm-6.png');
+}
+
+.bg-\[url\(\'assets\/slides\/slm-7\.png\'\)\] {
+  background-image: url('assets/slides/slm-7.png');
+}
+
 .from-primary {
   --tw-gradient-from: #651985 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(101 25 133 / 0) var(--tw-gradient-to-position);
