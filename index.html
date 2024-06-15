@@ -1,0 +1,2312 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="output.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="icon" type="image/x-icon" href="assets/fav.svg">
+
+    <!-- Library styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <title>МэйкерТех | Инжиниринговая компания</title>
+  </head>
+
+  <body id="mainBody" class="selection:bg-amber-300 selection:text-amber-700">
+    <header
+      class=" fixed z-40 w-full h-[72px]
+      bg-white shadow-sm"
+    >
+      <div 
+        class="mx-auto h-full max-w-screen-xl
+        flex items-center gap-3 lg:gap-5 xl:gap-6 justify-between 
+        py-3 px-6 lg:px-10 xl:px-20 2xl:px-6"
+      >
+        <!--logo-->
+        <a href="#start" class="flex z-50">
+          <img src="assets/logo.png" alt="Логотип Мк.Т" class="h-7 mr-3" />
+        </a>
+        
+        <div class="hidden lg:block w-0.5 h-full bg-gray-300/50"></div>
+
+        <!-- nav menu --> 
+        <div 
+          id="nav-menu"
+          class="hidden lg:flex justify-between flex-grow"
+        >
+          
+          <nav
+            id="nav-links"
+            class="flex gap-2"
+          >
+            <a 
+              class="rounded px-4 py-2 font-medium 
+             text-gray-500 hover:bg-gray-200/50 hover:text-gray-900"
+              href="#about"
+            >
+              О нас 
+            </a>
+
+            <a 
+              class="rounded px-4 py-2 font-medium 
+             text-gray-500 hover:bg-gray-200/50 hover:text-gray-900"
+              href="#services"
+            >
+              Возможности
+            </a>
+
+            <!-- Services dropdown button -->
+            <!-- <div class="hs-dropdown [--trigger:hover] relative inline-flex">
+              <button 
+                id="hs-dropdown-hover-event" type="button" 
+                class="hs-dropdown-toggle py-2 px-4 inline-flex items-center gap-x-2 
+                font-medium rounded text-gray-500 hover:bg-gray-200/50 hover:text-gray-900"
+              >
+                Возможности
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </button>
+            
+              <div 
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100
+                opacity-0 hidden bg-white shadow rounded-b-lg mt-2 px-8 pt-2 pb-6 flex flex-col gap-y-2 font-medium
+                after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full 
+                before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" 
+                aria-labelledby="hs-dropdown-hover-event"
+              >
+                <a class="py-2 px-3 rounded text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100" href="#">
+                  Проектирование
+                </a>
+
+                <a 
+                  class="py-2 px-3 rounded text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 " 
+                  href="#"
+                >
+                  3D-печать
+                </a>
+
+                <a class="py-2 px-3 rounded text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100" href="#">
+                  Литьё
+                </a>
+
+                <a class="py-2 px-3 rounded text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100" href="#">
+                  Механическая обработка
+                </a>
+              </div>
+            </div> -->
+            <!-- End services dropdown button -->
+            <a 
+              class="rounded px-4 py-2 font-medium 
+              text-gray-500 hover:bg-gray-200/50 hover:text-gray-900"
+              href="#gallery"
+            > 
+              Галерея 
+            </a>
+
+            <a 
+              class="rounded px-4 py-2 font-medium 
+              text-gray-500 hover:bg-gray-200/50 hover:text-gray-900"
+              href="#contacts"
+            > 
+              Контакты 
+            </a>
+          </nav>
+
+          <!-- phone -->
+          <div>
+            <a
+              href="tel:89119753234"
+              class="flex-grow justify-end items-center gap-2 hidden xl:flex 
+              text-gray-500 hover:bg-gray-100 rounded px-4 py-2 font-medium"
+            >
+              <span class="material-symbols-outlined">call</span>
+              <span>+7 (911) 975-32-34</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- request button -->
+        <div 
+          class="hidden items-center justify-end sm:flex flex-grow lg:flex-grow-0 z-50"
+        >
+          <button
+            id="open-modal-button"
+            class="rounded bg-primary shadow shadow-primary/50 px-6 py-3 font-medium text-white transition-all hover:opacity-80"
+            
+          >
+          <!-- onclick="toggleModal()" -->
+            Оставить заявку
+          </button>
+        </div>
+              
+        <!--dropdown menu button-->
+        <div
+          id="dropdown-button"
+          class="lg:hidden z-50 rounded hover:bg-gray-200/50 p-3 text-gray-600 peer/button"
+          type="button"
+        >
+          <span class="sr-only">Меню</span>
+
+          <svg
+            aria-hidden="true"
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewbox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke-linecap="square"
+              stroke-linejoin="square"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+
+        <!-- dropdown menu -->
+        <div 
+          id="dropdown-menu"
+          class="hidden w-full sm:w-80 p-8 pt-24 shadow-sm
+          absolute top-0 right-0 peer-hover/button:flex hover:flex flex-col gap-3
+          bg-white sm:rounded-bl-lg"
+        >
+          <button
+            id="open-modal-button"
+            class="sm:hidden rounded bg-primary shadow shadow-primary/50 px-6 py-3 font-medium text-white transition-all hover:opacity-80"
+            onclick="toggleModal()"
+          >
+            Оставить заявку
+          </button>  
+
+          <nav
+            id="nav-links"
+            class="flex gap-2 flex-col w-full
+            *:rounded *:px-4 *:py-2 *:font-medium
+            *:text-gray-500 hover:*:bg-gray-200/50 hover:*:text-gray-900"
+          >
+            <!-- phone -->
+            <a
+              href="tel:89119753234"
+              class="flex justify-center sm:justify-start items-center gap-2 w-full hover:bg-gray-100 rounded"
+            >
+              <span class="material-symbols-outlined">call</span>
+              <span>+7 (911) 975-32-34</span>
+            </a>
+
+            <a href="#about" class="text-center sm:text-left"> О нас </a>
+
+            <a href="#services" class="text-center sm:text-left"> Возможности </a>
+
+            <!-- Submenu -->
+            <!-- <div class="hs-dropdown [--strategy:static] [--adaptive:none]">
+
+              <button 
+                id="hs-mega-menu-basic-dr" type="button" 
+                class="hs-dropdown-toggle inline-flex items-center justify-center sm:justify-start gap-x-2 w-full"
+              >
+                Возможности
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </button> -->
+              
+              <!-- Submenu dropdown -->
+              <!-- <div 
+                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0
+                z-10 w-full flex flex-col gap-1 py-2 *:text-center sm:*:text-left
+                before:absolute before:-top-5 before:start-0 before:w-full before:h-5 hidden"
+              >
+                <a 
+                  class="rounded px-4 py-2 font-medium w-full
+                text-gray-500 hover:bg-white hover:text-gray-900"
+                  href="#"
+                >
+                  Проектирование
+                </a>
+                
+                <a 
+                  class="rounded px-4 py-2 font-medium w-full
+                text-gray-500 hover:bg-white hover:text-gray-900"
+                  href="#"
+                >
+                  3D-печать
+                </a>
+
+                <a 
+                  class="rounded px-4 py-2 font-medium w-full
+                text-gray-500 hover:bg-white hover:text-gray-900"
+                  href="#"
+                >
+                  Литьё
+                </a>
+
+                <a 
+                  class="rounded px-4 py-2 font-medium w-full
+                text-gray-500 hover:bg-white hover:text-gray-900"
+                  href="#"
+                >
+                  Механическая обработка
+                </a>
+    
+              </div>
+            </div> -->
+            <a href="#gallery" class="text-center sm:text-left"> Галерея </a>
+
+            <a href="#contacts" class="text-center sm:text-left"> Контакты </a>
+          </nav>
+        </div>
+
+      </div>
+      </div>
+    </header>
+
+    
+<!-- ============= HERO SECTION ========== -->
+    <section
+      id="start"
+      class="h-screen bg-gray-100 pt-16 overflow-x-clip"
+    >
+
+      <div 
+        id="hero-wrapper"
+        class="flex flex-col md:grid grid-cols-12 lg:grid-cols-11 xl:grid-cols-11 place-content-center mx-auto
+        w-full h-full max-w-screen-xl relative px-6 lg:px-10 xl:px-20 2xl:px-6 z-10"
+      >
+        <div 
+          id="hero-content" 
+          class="flex flex-col md:gap-6 md:col-span-8 lg:col-span-7 py-10 md:py-0 justify-end h-full">
+
+          <!-- Intro text -->
+          <div class="hero-text flex flex-col gap-8">
+            
+            <h1 
+              class="w-full text-wrap text-center md:text-left font-semibold bg-gradient-to-r opacity-80 from-primary to-primary-950 bg-clip-text text-transparent
+              text-5xl sm:text-8xl md:text-7xl lg:text-8xl"
+            >
+              МэйкерТех
+            </h1>
+
+
+            <!-- Services grid -->
+            <div 
+              class="grid grid-cols-5 md:grid-cols-5 lg:grid-cols-8 grid-rows-2 gap-y-2 lg:gap-y-3 divide-x-2 border-x-2 
+              border-gray-300 text-xs sm:text-sm lg:text-base
+              *:text-gray-500 *:text-nowrap *:border-gray-300 *:text-center"
+            >
+              <span 
+                class="col-span-2 order-1"
+              >
+                Проектирование
+              </span>
+              <span 
+                class="col-span-2 lg:col-span-3 xl:col-span-2 order-4 lg:order-2"
+              >
+                Реверс-инжиниринг
+              </span>
+              <span 
+                class="col-span-3 order-2 lg:order-3 "
+              >
+                Разработка оборудования
+              </span>
+              <span 
+                class="col-span-1 order-5 lg:order-4
+                border-none xl:border-solid"
+              >
+                Литьё
+              </span>
+              <span 
+                class="col-span-3 order-3 lg:order-5
+                border-none lg:border-solid xl:border-none"
+              >
+                Механическая обработка
+              </span>
+              <span 
+                class="col-span-1 order-6
+                 md:border-solid"
+              >
+                FDM
+              </span>
+              <span 
+                class="col-span-1 order-7"
+              >
+                SLA
+              </span>
+              <span 
+                class="col-span-1 order-8"
+              >
+                SLS
+              </span>
+              <span 
+                class="col-span-1 order-9"
+              >
+                SLM
+              </span>
+              <span 
+                class="col-span-1 hidden xl:block order-10"
+              >
+                и др.
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Hero buttons -->
+          <div 
+            id="hero-buttons"
+            class="flex gap-4 mt-6 *:text-lg md:*:text-xl *:w-auto *:px-8 flex-col sm:flex-row">
+              <a
+                href="#contacts"
+                class="rounded bg-primary shadow shadow-primary/50 py-4 font-medium text-white text-center text-nowrap transition-all hover:opacity-80 w-min order-2 md:order-1"
+              >
+                Связаться с нами
+              </a>
+
+              <a
+                href="#services"
+                class="rounded py-4 font-medium shadow bg-gray-50 text-gray-600 text-nowrap justify-center sm:justify-between
+                transition-all hover:bg-gray-200 hover:shadow w-min items-center gap-4 flex flex-grow md:flex-grow-0 order-1 md:order-2"
+              >
+                Подробнее
+                <span class="material-symbols-outlined">
+                  arrow_right_alt
+                </span>
+              </a>
+          </div>
+        </div>
+
+        <!-- Parallax images -->
+
+        <!-- Main Image -->
+        <img 
+          src="assets/intro-comp.svg" 
+          class="md:w-1/2 absolute md:-right-[7rem] bottom-60 sm:bottom-36 md:top-1/8 md:tall:top-1/5 mouse parallax-image -z-10"
+          value="1"
+        >
+        <img 
+          src="assets/stars-yellow.svg" 
+          alt="" 
+          class="md:w-1/2 absolute md:-right-[7rem] bottom-60 sm:bottom-36 md:top-1/8 md:tall:top-1/5 mouse parallax-image -z-10"
+          value="2"
+        >
+        <img 
+          src="assets/stars-purple.svg" 
+          alt="" 
+          class="md:w-1/2 absolute md:-right-[7rem] bottom-60 sm:bottom-36 md:top-1/8 md:tall:top-1/5 mouse parallax-image -z-10"
+          value="-1"
+        >
+        <img 
+          src="assets/Ellipse 2.svg" 
+          alt=""
+          class="w-1/2 absolute -right-32 sm:-right-40 lg:-right-60 -top-20 sm:-top-60 lg:-top-96 mouse parallax-image -z-20"
+          value="-3"
+        >
+        <img 
+          src="assets/Ellipse 3.svg" 
+          class="w-1/2 absolute -left-36 sm:-left-56 lg:-left-96 xl:-left-[500px] 2xl:-left-[600px] -bottom-52 lg:-bottom-72 mouse parallax-image -z-20 opacity-70"
+          value="-4"
+        >
+
+        <!-- <img src="assets/Ellipse 2.svg" alt="" class="size-[500px] absolute -z-10 top-0 right-0"> -->
+      </div>
+    </section>
+    
+    <!-- ================ About Us ===================== -->
+    <section 
+      id="about"
+      class="bg-gray-100 sm:text-lg overflow-x-clip pb-20"
+    >
+      <!-- Grid wrapper -->
+
+      <div 
+        class="grid lg:grid-cols-2 gap-12 lg:gap-20 
+        px-6 lg:px-10 xl:px-20 2xl:px-6 py-28 sm:py-32 max-w-7xl mx-auto"
+      >
+        
+        <div class="flex flex-col gap-5 sm:text-lg lg:text-xl">
+          <h2 
+            class="w-full text-left text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold text-gray-500 mb-10 self-start
+            bg-gradient-to-r opacity-80 from-primary to-primary-950 bg-clip-text text-transparent"
+          >
+            О нас
+          </h2>
+          
+          <p class="text-2xl sm:text-3xl text-gray-600 text-left">
+            <span class="font-semibold">МэйкерТех</span> — инжиниринговая компания широкого спектра.
+          </p>
+          <hr class="border w-40 border-gray-300 my-4 mx-auto sm:mx-0">
+
+          <p class="text-gray-600">
+            Мы специализируемся на разработке инновационных технологий и уникальных методов производства, что позволяет нам 
+            создавать продукцию высокого качества.
+          </p>
+
+          <p class="text-gray-600">
+            Наша компания предоставляет комплексные услуги в области инжиниринга и аддитивных технологий, а также услуги по метрологическому 
+            контролю и поставке оборудования и ПО.
+          </p>
+          
+        </div>
+        <!-- End Col -->
+
+        <!-- Features -->
+        <div class="flex flex-col gap-6 lg:gap-10 text-base sm:text-lg lg:text-base relative z-10">
+
+          <img 
+            src="assets/Ellipse 3.svg" 
+            alt=""
+            class="w-full absolute -right-60 -top-40 -z-20 opacity-40"
+          >
+
+          <!-- Feature Block 1 -->
+          <div 
+            class="flex flex-col sm:flex-row gap-8 bg-gray-50 shadow rounded-lg p-6 pl-8 text-center sm:text-left" 
+            data-aos="fade-down"
+            data-aos-anchor="#about"
+            data-aos-duration="600"
+          >
+            <!-- Icon -->
+            <span class="inline-flex items-center fill-amber-300 mx-auto">
+              <svg 
+                width="129" height="130" viewBox="0 0 129 130" xmlns="http://www.w3.org/2000/svg"
+                class="size-12"
+              >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.543945 0.983582H128.59V129.03H101.758L97.3933 115.142H31.9284L27.0621 129.03H0.543945V0.983582ZM19.385 19.8246H109.417V39.4501H75.7385V31.2708H53.8V39.4501H19.385V19.8246ZM75.7385 46.4501H109.417V99.8535H82.5128V69.1644H47.0258V99.8535H19.385V46.4501H53.8V54.2065H61.067V61.0195H68.067V54.2065H75.7385V46.4501Z"/>
+              </svg>
+            </span>
+
+            <div class="">
+              <h3 class="sm:text-lg font-semibold text-gray-700">
+                Собственное оборудование
+              </h3>
+              <p class="text-sm sm:text-lg mt-2 text-gray-600">
+                Разрабатываем и поставляем оборудование, которое позволит повышать эффективность производства.
+              </p>
+            </div>
+          </div>
+          <!-- End Icon Block -->
+
+          <!-- Feature Block 2 -->
+          <div 
+            class="flex flex-col sm:flex-row gap-8 bg-gray-50 shadow rounded-lg p-6 pl-8 text-center sm:text-left" 
+            data-aos="fade-down"
+            data-aos-anchor="#about"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
+            <!-- Icon -->
+            <span class="inline-flex items-center fill-amber-300 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" class="size-12">
+                <path d="m22.5,18c0-.46-.089-.895-.218-1.313l1.416-.816-.998-1.733-1.411.813c-.605-.652-1.393-1.125-2.289-1.33v-1.621h-2v1.621c-.896.205-1.685.678-2.289,1.33l-1.411-.813-.998,1.733,1.416.816c-.129.418-.218.853-.218,1.313s.089.895.218,1.313l-1.416.816.998,1.733,1.411-.813c.605.652,1.393,1.125,2.289,1.33v1.621h2v-1.621c.896-.205,1.685-.678,2.289-1.33l1.411.813.998-1.733-1.416-.816c.129-.418.218-.853.218-1.313Zm-4.5,1.5c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5.673,1.5,1.5-.673,1.5-1.5,1.5Zm-9.999-.502h-3.125c-.264-1.251-.951-2.435-2.007-3.417C.72,13.58-.298,10.752.076,7.82.591,3.78,3.905.515,7.957.057c2.567-.289,5.13.522,7.038,2.227,1.91,1.707,3.006,4.154,3.006,6.714,0,.338-.021.673-.058,1.005-4.386.031-7.932,3.589-7.942,7.98v-7.169c1.161-.414,2-1.514,2-2.816h-2c0,.551-.448,1-1,1s-1-.449-1-1h-2c0,1.302.839,2.402,2,2.816v8.184Zm4.718,5h-7.718v-3h5.585c.47,1.162,1.207,2.184,2.132,3Z"/>
+              </svg>
+            </span>
+
+            <div class="">
+              <h3 class="sm:text-lg font-semibold text-gray-700">
+                Современные технологии
+              </h3>
+              <p class="text-sm sm:text-lg mt-2 text-gray-600">
+                Внедряем инновационные методы в процессы производства и разрабатываем современные продукты, включая нетиповые решения.
+              </p>
+            </div>
+          </div>
+          <!-- End Icon Block -->
+
+          <!-- Feature Block 3 -->
+          <div 
+            class="flex flex-col sm:flex-row gap-8 bg-gray-50 shadow rounded-lg p-6 pl-8 text-center sm:text-left" 
+            data-aos="fade-down"
+            data-aos-anchor="#about"
+            data-aos-delay="400"
+            data-aos-duration="600"
+          >
+            <!-- Icon -->
+            <span class="inline-flex items-center fill-amber-300 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" class="size-12">
+                <path d="m16.5,6c0-.452-.087-.88-.211-1.291l1.42-.809-.99-1.738-1.416.807c-.606-.66-1.4-1.14-2.303-1.347V0h-2v1.621c-.903.206-1.697.687-2.303,1.347l-1.416-.807-.99,1.738,1.42.809c-.124.412-.211.84-.211,1.291s.087.88.211,1.291l-1.42.809.99,1.738,1.416-.807c.606.66,1.4,1.14,2.303,1.347v1.621h2v-1.621c.903-.206,1.697-.687,2.303-1.347l1.416.807.99-1.738-1.42-.809c.124-.412.211-.84.211-1.291Zm-4.5,1.5c-.827,0-1.5-.673-1.5-1.5s.673-1.5,1.5-1.5,1.5.673,1.5,1.5-.673,1.5-1.5,1.5Zm-5.5,14.5v2H0v-2c0-1.105.895-2,2-2h2.5c1.105,0,2,.895,2,2Zm15.5-2h-2.5c-1.105,0-2,.895-2,2v2h6.5v-2c0-1.105-.895-2-2-2Zm-8.5,0h-3c-1.105,0-2,.895-2,2v2h7v-2c0-1.105-.895-2-2-2Zm7.269-1c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm-8.769,0c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm-8.769,0c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm15.69-12c.047-.327.08-.66.08-1s-.033-.673-.08-1h2.08c1.654,0,3,1.346,3,3v5.38c-.542-.561-1.231-.967-2-1.187v-4.193c0-.552-.448-1-1-1h-2.08ZM0,13.38v-5.38c0-1.654,1.346-3,3-3h2.08c-.047.327-.08.66-.08,1s.033.673.08,1h-2.08c-.552,0-1,.448-1,1v4.193c-.769.221-1.458.627-2,1.187Z"/>
+              </svg>
+
+            </span>
+
+            <div class="">
+              <h3 class="sm:text-lg font-semibold text-gray-700">
+                Команда экспертов
+              </h3>
+              <p class="text-sm sm:text-lg mt-2 text-gray-600">
+                МэйкерТех — это команда квалифицированных специалистов, стремящихся обеспечивать качественный и стабильный сервис нашим 
+                клиентам.
+              </p>
+            </div>
+          </div>
+          <!-- End Icon Block -->
+
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+
+      <aside 
+        class="px-6 lg:px-10 xl:px-20 2xl:px-6 max-w-4xl mx-auto pt-12 sm:pt-0
+        sm:text-lg lg:text-xl text-gray-600"
+      >
+        <div class="relative">
+          <div class="p-10 sm:p-14 lg:pr-32 bg-gray-50 rounded-lg shadow relative overflow-hidden z-20">
+            <div class="flex flex-col gap-5 relative z-20">
+              <p>
+                <mark class="inline px-2 py-1 rounded bg-primary/30">МэйкерТех</mark> — это не только инжиниринговая компания, но и объединение технологических энтузиастов, стремящееся развивать технологии и улучшать мир. <br>
+              </p>
+              <p>
+                Мы осознали, что можем помогать окружающим при помощи наших навыков и оборудования.
+                Поэтому мы всегда рады сотрудничеству, долгосрочному взаимодействию и доверительному отношению как внутри коллектива, так и с партнёрами компании.
+              </p>
+            </div>
+            <svg
+                width="256" height="259" viewBox="0 0 256 259" xmlns="http://www.w3.org/2000/svg"
+                class="absolute fill-gray-200 -right-16 -top-3 size-52 z-10"
+              >
+                <path d="M151.338 229.172L186.222 159.123L256 124.104L186.222 89.0852L151.338 19.0365L116.454 89.0852L46.676 124.104L116.454 159.123L151.338 229.172ZM207.926 124.104L170.204 143.044L151.338 180.912L132.472 143.044L94.75 124.104L132.472 105.165L151.338 67.2968L170.204 105.165L207.926 124.104ZM65.338 226.625L49.213 259L33.088 226.625L0.837999 210.438L33.088 194.25L49.213 161.875L65.338 194.25L97.588 210.438L65.338 226.625ZM51.0082 50.3647L38.463 75.5417L25.9178 50.3647L0.837999 37.7708L25.9178 25.177L38.463 0L51.0082 25.177L76.088 37.7708L51.0082 50.3647Z"/>
+              </svg>
+          </div>
+
+          <img 
+            src="assets/footer-comp.svg" alt="" 
+            class="absolute z-0 w-full sm:w-3/4 md:w-1/2 lg:w-4/5 -top-52 lg:-top-60 xl:-top-40 -left-20 lg:-left-72 xl:-left-96"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
+
+          <img 
+            src="assets/Ellipse 2.svg" 
+            alt=""
+            class="w-3/5 absolute -left-32 right-auto sm:left-auto sm:-right-40 md:-right-60 -bottom-32 md:-bottom-0 z-0 opacity-40"
+          >
+        </div>
+        
+      </aside>
+    </section>
+    <!-- ================ ABOUT END ===================== -->
+
+
+    <!-- ========== SERVICES ========== -->
+    <section 
+      id="services"
+      class="bg-gray-100 sm:text-lg overflow-x-clip"
+    >
+      <div 
+        class="services-wrapper px-6 lg:px-10 xl:px-20 2xl:px-6 py-28 sm:py-32 max-w-7xl relative mx-auto
+        flex flex-col items-center gap-6"
+      >
+        <!-- Image -->
+        <img 
+          src="assets/Frame 59.svg" alt="" 
+          class="w-4/5 sm:w-1/2 lg:w-2/5 absolute -z-0
+          -right-20 sm:-right-8 lg:-right-20 xl:-right-24 
+          -top-40 sm:top-14 lg:-top-10 xl:-top-16"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-duration="600"
+        >
+
+        <!-- TITLE -->
+        <!-- <h2 class="text-4xl md:text-5xl font-semibold text-gray-600 mb-12">Наши возможности</h2> -->
+        <h2 
+          class="w-full text-left text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold text-gray-500 mb-8 self-start
+          bg-gradient-to-r opacity-80 from-primary to-primary-950 bg-clip-text text-transparent"
+        >
+          Наши <br class="lg:hidden">возможности
+        </h2>
+
+        <!-- ====== Tabs navigation ======== -->
+        <nav
+          class="max-w-7xl grid grid-rows-2 sm:grid-cols-2 lg:flex gap-y-2 gap-x-3 w-full z-10
+          *:justify-center *:shadow *:bg-gray-50 *:text-nowrap *:transition-all"
+          aria-label="Tabs"
+          role="tablist"
+        >
+          <!-- Tab 1 -->
+          <button
+            type="button"
+            class="hs-tab-active:bg-gray-200 hs-tab-active:hover:border-transparent hs-tab-active:shadow active
+            w-full flex gap-4 hover:bg-gray-200 p-3 md:p-5 rounded"
+            id="tabs-with-card-item-1" data-hs-tab="#tabs-with-card-1" aria-controls="tabs-with-card-1" role="tab"
+          >
+            <svg
+              class="flex-shrink-0 size-7 hs-tab-active:fill-primary fill-gray-500"
+              width="186" height="211" viewBox="0 0 186 211" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0.0111983 192.23C-0.0119988 128.154 0.00803746 64.0767 0.00803746 0C31.8565 0 63.705 0 95.5535 0C114.669 19.2171 133.782 38.4374 152.883 57.6691C152.889 67.601 152.886 86.1832 152.886 96.1151L76.4471 172.767V192.23H0.0111983ZM133.776 67.2806L86.002 19.223C86.002 35.2422 86.0064 51.2614 85.9986 67.2806C101.925 67.2806 117.85 67.2806 133.776 67.2806Z"/>
+              <path d="M132.121 135.579L142.778 146.095L104.123 184.154L104.056 194.601L114.531 194.668L153.186 156.609L163.844 167.125L120.671 209.632L88.9958 209.429L89.1984 177.84L132.121 135.579ZM163.844 167.125L132.121 135.579L153.707 114.325L185.18 146.118L163.844 167.125Z"/>
+            </svg>
+        
+            <span class="hs-tab-active:text-primary block font-semibold sm:text-lg text-gray-500">Проектирование</span>
+          </button>
+          <!-- Tab 2 -->
+          <button
+          type="button"
+          class="hs-tab-active:bg-gray-200 hs-tab-active:hover:border-transparent hs-tab-active:shadow
+          w-full flex gap-4 hover:bg-gray-200 p-3 md:p-5 rounded"
+          id="tabs-with-card-item-2" data-hs-tab="#tabs-with-card-2" aria-controls="tabs-with-card-2" role="tab"
+          >
+            <svg
+              class="flex-shrink-0 size-7 hs-tab-active:fill-primary text-gray-500 fill-gray-500"
+              width="316" height="337" viewBox="0 0 316 337" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M140.271 38.5426C143.041 37.5443 149.047 35.394 149.047 35.394C149.047 35.394 154.94 37.4964 157.864 38.5426C189.761 49.9588 221.664 61.3566 253.547 72.8097C253.547 112.052 253.547 151.294 253.547 190.536C253.547 195.924 253.547 208.978 253.547 208.978C253.547 208.978 241.527 213.289 236.198 215.194L157.823 243.245C154.858 244.314 149.047 246.394 149.047 246.394C149.047 246.394 142.958 244.221 140.23 243.245L61.8547 215.194C56.6215 213.316 44.5469 208.978 44.5469 208.978C44.5469 208.978 44.5469 196.025 44.5469 190.536L44.5469 91.2517C44.5469 86.7007 44.5469 72.8097 44.5469 72.8097C44.5469 72.8097 55.777 68.7814 61.8955 66.5942C61.8955 66.5942 134.596 40.5872 140.271 38.5426ZM149.047 63.2002L78.142 88.5529L149.047 113.906L219.952 88.5529L149.047 63.2002ZM162.109 213.926L227.422 190.577L227.422 113.701L162.109 137.05L162.109 213.926Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M102.547 200.029L102.547 181.894C117.335 176.571 132.128 171.262 146.922 165.956L146.922 188.618L129.873 194.727L146.922 200.837L146.922 215.927L102.547 200.029ZM102.547 222.66L102.547 277.861L102.547 292.894C102.547 292.894 112.323 296.408 116.658 297.961L180.408 320.827C182.82 321.698 187.547 323.394 187.547 323.394C187.547 323.394 192.499 321.623 194.719 320.827L258.469 297.961C262.725 296.43 272.547 292.894 272.547 292.894L272.547 277.861L272.547 196.927L272.547 181.894C272.547 181.894 263.412 178.61 258.435 176.827C258.435 176.827 251.675 174.404 242.547 171.131L242.547 193.769L245.221 194.727L242.547 195.686L242.547 196.861L242.547 211.894C242.547 211.894 232.725 215.43 228.469 216.961L176.922 235.45L176.922 296.927L123.797 277.894L123.797 230.282L102.547 222.66Z"/>
+            </svg>
+        
+            <span class="hs-tab-active:text-primary block font-semibold sm:text-lg text-gray-500">3D-печать</span>
+          </button>
+          <!-- Tab 3 -->
+          <button
+          type="button"
+          class="hs-tab-active:bg-gray-200 hs-tab-active:hover:border-transparent hs-tab-active:shadow
+          w-full flex gap-4 hover:bg-gray-200 p-3 md:p-5 rounded"
+          id="tabs-with-card-item-3" data-hs-tab="#tabs-with-card-3" aria-controls="tabs-with-card-3" role="tab"
+          >
+            <svg
+              class="flex-shrink-0 size-7 hs-tab-active:fill-primary text-gray-500 fill-gray-500"
+              width="173" height="143" viewBox="0 0 190 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M173 -2.96851C173 3.11353 168.168 8.72251 160.025 13.2502C150.192 18.6903 135.528 22.5422 118.701 23.6911C117.451 23.0829 116.201 22.5084 114.883 22.0016C101.57 16.4264 83.8645 13.2502 64.875 13.2502C62.0705 13.2502 59.3336 13.3178 56.5967 13.453L56.225 13.2502C48.0818 8.72251 43.25 3.11353 43.25 -2.96851C43.25 -17.9033 72.3086 -29.9998 108.125 -29.9998C143.941 -29.9998 173 -17.9033 173 -2.96851ZM54.299 24.4344C57.7455 24.1979 61.2934 24.0627 64.875 24.0627C85.8918 24.0627 104.543 28.2188 116.403 34.6725C124.783 39.234 129.75 44.9106 129.75 51.094C129.75 52.4456 129.513 53.7633 129.04 55.0473C127.486 59.5075 123.296 63.596 117.214 67.0424C117.18 67.0762 117.113 67.0762 117.079 67.11C116.978 67.1776 116.876 67.2114 116.775 67.279C104.949 73.834 86.0945 78.0915 64.875 78.0915C44.7367 78.0915 26.7271 74.2733 14.7996 68.2588C14.1576 67.9547 13.5494 67.6168 12.9412 67.279C4.83184 62.785 -3.86428e-07 57.176 -3.59468e-07 51.094C-3.07345e-07 39.3354 18.0434 29.3001 43.25 25.617C46.7979 25.1102 50.4809 24.7047 54.299 24.4344ZM140.562 51.094C140.562 43.6942 136.981 37.6122 132.419 33.0506C141.982 31.5639 150.733 29.1987 158.167 26.1239C163.674 23.8262 168.81 20.9879 173 17.5077L173 29.469C173 35.9903 167.425 42.0047 158.2 46.6676C153.267 49.168 147.253 51.2967 140.495 52.9186C140.529 52.3104 140.562 51.736 140.562 51.1278L140.562 51.094ZM129.75 83.5315C129.75 89.6135 124.918 95.2225 116.775 99.7502C116.167 100.088 115.559 100.392 114.917 100.73C103.023 106.745 85.0133 110.563 64.875 110.563C43.6555 110.563 24.8012 106.305 12.975 99.7502C4.83184 95.2225 -5.30215e-07 89.6135 -5.03255e-07 83.5315L-4.50233e-07 71.5702C4.22363 75.0504 9.32578 77.8887 14.8334 80.1864C28.1801 85.7616 45.8855 88.9377 64.875 88.9377C83.8645 88.9377 101.57 85.7616 114.917 80.1864C117.552 79.1051 120.086 77.8549 122.485 76.5034C124.546 75.3545 126.472 74.0706 128.297 72.719C128.804 72.3473 129.277 71.9418 129.75 71.5702L129.75 72.719L129.75 74.645L129.75 83.5315ZM140.562 83.5315L140.562 72.719L140.562 63.9676C146.982 62.5485 152.896 60.7577 158.167 58.5614C163.674 56.2637 168.81 53.4254 173 49.9452L173 61.9065C173 65.4543 171.311 69.0022 167.965 72.3473C162.458 77.8549 152.76 82.3827 140.495 85.3223C140.529 84.7479 140.562 84.1397 140.562 83.5315ZM64.875 121.375C83.8645 121.375 101.57 118.199 114.917 112.624C120.424 110.326 125.56 107.488 129.75 104.008L129.75 115.969C129.75 130.904 100.691 143 64.875 143C29.0586 143 -7.13244e-07 130.904 -6.47042e-07 115.969L-5.94021e-07 104.008C4.22363 107.488 9.32578 110.326 14.8334 112.624C28.1801 118.199 45.8855 121.375 64.875 121.375Z"/>
+            </svg>
+        
+            <span class="hs-tab-active:text-primary block font-semibold sm:text-lg text-gray-500">Литьё</span>
+          </button>
+          <!-- Tab 4 -->
+          <button
+          type="button"
+          class="hs-tab-active:bg-gray-200 hs-tab-active:hover:border-transparent hs-tab-active:shadow
+          w-full flex gap-4 hover:bg-gray-200 p-3 md:p-5 rounded"
+          id="tabs-with-card-item-4" data-hs-tab="#tabs-with-card-4" aria-controls="tabs-with-card-4" role="tab"
+          >
+            <svg
+              class="flex-shrink-0 size-7 hs-tab-active:fill-primary text-gray-500 fill-gray-500"
+              width="173" height="210" viewBox="0 0 200 210"
+              fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M184.863 114.421L184.973 114.208L207.252 132.306C209.26 133.834 210.736 135.14 210.736 135.14L184.171 179.779L153.596 167.032L153.815 166.606C148.096 170.921 141.854 174.478 135.196 177.171L135.303 177.173L130.852 205.509C130.496 208.076 130.149 210 130.149 210L78.3724 209.282L74.0259 176.216L74.3461 176.221C67.6591 173.342 61.6245 169.615 56.0272 165.143L56.2348 165.575L25.318 177.47L0 132.111L3.5616 129.374L26.2256 112.007L26.3294 112.223C25.8447 108.68 25.5749 105.033 25.6254 101.39C25.6759 97.7471 26.0437 94.323 26.5198 90.7933L26.41 91.0061L0.646561 70.074L27.3221 25.222L57.8943 38.1837L57.786 38.2893C63.3968 34.0807 69.5324 30.5223 76.19 27.8284L76.0832 27.8269L81.2366 -5L133.227 -4.27917L137.683 28.5738L137.577 28.5724C144.157 31.4498 150.192 35.1769 155.684 39.5395L155.578 39.4309L186.39 27.4274L211.705 73.0002L185.371 93.21L185.267 92.9943C185.645 96.5358 185.918 99.9687 185.867 103.612C185.817 107.254 185.339 110.891 184.863 114.421ZM97.2777 112.179C99.686 114.591 102.582 115.798 105.967 115.798C109.352 115.798 112.25 114.591 114.663 112.179C117.071 109.771 118.275 106.874 118.275 103.49C118.275 100.105 117.071 97.2065 114.663 94.7942C112.25 92.3859 109.352 91.1818 105.967 91.1818C102.582 91.1818 99.686 92.3859 97.2777 94.7942C94.8654 97.2065 93.6592 100.105 93.6592 103.49C93.6592 106.874 94.8654 109.771 97.2777 112.179ZM68.9697 144.795C79.4806 154.182 91.8131 158.875 105.967 158.875C113.66 158.875 120.866 157.414 127.586 154.493C134.302 151.568 140.148 147.617 145.125 142.641C150.097 137.669 154.046 131.822 156.971 125.102C159.892 118.386 161.352 111.182 161.352 103.49C161.352 95.7973 159.892 88.591 156.971 81.8709C154.046 75.155 150.097 69.3087 145.125 64.3322C140.148 59.3599 134.302 55.4111 127.586 52.4859C120.866 49.5649 113.66 48.1043 105.967 48.1043C97.5567 48.1043 89.5833 49.8992 82.0468 53.489C74.5062 57.0788 68.1205 62.1558 62.8896 68.72V54.2583H50.5818V91.1818H87.5053V78.874H70.582C74.7872 73.1303 79.9668 68.6174 86.1207 65.3353C92.2746 62.0532 98.8901 60.4122 105.967 60.4122C117.967 60.4122 128.146 64.5907 136.503 72.9477C144.864 81.3089 149.045 91.4895 149.045 103.49C149.045 115.49 144.864 125.668 136.503 134.025C128.146 142.387 117.967 146.567 105.967 146.567C95.1977 146.567 85.7863 143.08 77.7329 136.105C69.6835 129.131 64.9409 120.31 63.505 109.644H50.8895C52.4279 123.695 58.4547 135.412 68.9697 144.795Z"/>
+            </svg>
+        
+            <span class="hs-tab-active:text-primary block font-semibold text-lg text-gray-500">Механическая обработка</span>
+          </button>
+        </nav>
+        <!-- End Tab Nav -->
+
+        <!-- ====== Tabs Content ======== -->
+        <div 
+          class="shadow rounded-md relative z-0"
+        >
+          <div 
+            class="tabscontent-wrapper relative overflow-hidden rounded-md
+            *:w-full *:bg-gray-50 *:overflow-hidden *:text-gray-600
+            *:grid-cols-1 md:*:grid-cols-6 *:grid-rows-[8rem_auto] md:*:grid-rows-1"
+          >
+            <!-- Card 1 -->
+            <div
+              class="grid"
+              id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1"
+            >
+              <!-- Image -->
+              <div
+                class="bg-[url('assets/dev.jpg')] bg-cover opacity-70 md:col-span-2"
+              >
+              </div>
+              <!-- Card content -->
+              <div class="card-content col-span-4 flex flex-col gap-8 py-8 sm:py-10 px-6 sm:px-10 md:px-14 z-10">
+            
+                <h3 class="text-2xl sm:text-3xl font-semibold">Проектирование изделий</h3>
+                <div class="flex flex-col gap-3">
+                  <p>Выполняем разработку конструкторской и технической документации по техническому заданию, эскизу или уже готовому образцу изделия.</p>
+                  <p>С помощью координатно-измерительных машин и 3D-сканеров выполняем высокоточный контроль с погрешностью от 0,004 мм.</p>
+                  <div>
+                    <p>Проектируем изделия различной сложности:</p>
+                    <ul class="marker:text-amber-400 list-disc ml-4 mt-1">
+                      <li class="">Пресс-формы</li>
+                      <li>Штампы</li>
+                      <li>Оснаcтку</li>
+                      <li>Нестандартные изделия</li>
+                      <li>Реверс-инжиниринг</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="rounded px-8 py-4 sm:text-lg md:text-xl font-medium bg-primary shadow shadow-primary/50 text-white 
+                  text-nowrap transition-all hover:opacity-80 w-full md:w-min flex items-center gap-4 justify-between md:justify-normal"
+                  data-hs-overlay="#hs-scroll-modal-design"
+                >
+                  Узнать больше
+        
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </button>
+
+            
+              </div>
+              <!-- Icon -->
+              <svg
+                  class="size-44 fill-gray-200/70 absolute -z-5 -right-10 bottom-10 rotate-12"
+                  width="186" height="211" viewBox="0 0 186 211" fill="none" xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0.0111983 192.23C-0.0119988 128.154 0.00803746 64.0767 0.00803746 0C31.8565 0 63.705 0 95.5535 0C114.669 19.2171 133.782 38.4374 152.883 57.6691C152.889 67.601 152.886 86.1832 152.886 96.1151L76.4471 172.767V192.23H0.0111983ZM133.776 67.2806L86.002 19.223C86.002 35.2422 86.0064 51.2614 85.9986 67.2806C101.925 67.2806 117.85 67.2806 133.776 67.2806Z"/>
+                <path d="M132.121 135.579L142.778 146.095L104.123 184.154L104.056 194.601L114.531 194.668L153.186 156.609L163.844 167.125L120.671 209.632L88.9958 209.429L89.1984 177.84L132.121 135.579ZM163.844 167.125L132.121 135.579L153.707 114.325L185.18 146.118L163.844 167.125Z"/>
+              </svg>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="hidden grid"
+              id="tabs-with-card-2" role="tabpanel" aria-labelledby="tabs-with-card-item-2"
+            >
+              <!-- Image -->
+              <div
+                class="bg-[url('assets/print.jpg')] bg-cover bg-center opacity-80 col-span-2"
+              >
+              </div>
+              <!-- Card content -->
+              <div class="card-content col-span-4 flex flex-col gap-8 py-8 sm:py-10 px-6 sm:px-10 md:px-14 z-10">
+                <h3 class="text-2xl sm:text-3xl font-semibold">3D-печать</h3>
+                
+                <div class="flex flex-col gap-3">
+                  <p>Подберём материал и технологию исходя из механических, химических, температурных и других требований заказчика.</p>
+
+                  <p>Возможна последующая механическая и химическая обработка изделия, а также окрашивание в необходимый цвет.</p>
+
+                  <ul class="marker:text-amber-400 list-disc ml-4 mt-1">
+                    <li>Пластик (FDM)</li>
+                    <li>Фотополимер (SLA)</li>
+                    <li>Полиамид (SLS)</li>
+                    <li>Металл (SLM)</li>
+                  </ul>
+                </div>
+                
+                <button
+                  type="button"
+                  class="rounded px-8 py-4 sm:text-lg md:text-xl font-medium bg-primary shadow shadow-primary/50 text-white 
+                  text-nowrap transition-all hover:opacity-80 w-full md:w-min flex items-center gap-4 justify-between md:justify-normal"
+                  data-hs-overlay="#hs-scroll-modal-3dprint"
+                >
+                  Узнать больше
+        
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </button>
+
+              </div>
+              <svg
+                class="size-56 fill-gray-200/70 absolute -z-5 -right-10 bottom-10"
+                width="316" height="337" viewBox="0 0 316 337" fill="none" xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M140.271 38.5426C143.041 37.5443 149.047 35.394 149.047 35.394C149.047 35.394 154.94 37.4964 157.864 38.5426C189.761 49.9588 221.664 61.3566 253.547 72.8097C253.547 112.052 253.547 151.294 253.547 190.536C253.547 195.924 253.547 208.978 253.547 208.978C253.547 208.978 241.527 213.289 236.198 215.194L157.823 243.245C154.858 244.314 149.047 246.394 149.047 246.394C149.047 246.394 142.958 244.221 140.23 243.245L61.8547 215.194C56.6215 213.316 44.5469 208.978 44.5469 208.978C44.5469 208.978 44.5469 196.025 44.5469 190.536L44.5469 91.2517C44.5469 86.7007 44.5469 72.8097 44.5469 72.8097C44.5469 72.8097 55.777 68.7814 61.8955 66.5942C61.8955 66.5942 134.596 40.5872 140.271 38.5426ZM149.047 63.2002L78.142 88.5529L149.047 113.906L219.952 88.5529L149.047 63.2002ZM162.109 213.926L227.422 190.577L227.422 113.701L162.109 137.05L162.109 213.926Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M102.547 200.029L102.547 181.894C117.335 176.571 132.128 171.262 146.922 165.956L146.922 188.618L129.873 194.727L146.922 200.837L146.922 215.927L102.547 200.029ZM102.547 222.66L102.547 277.861L102.547 292.894C102.547 292.894 112.323 296.408 116.658 297.961L180.408 320.827C182.82 321.698 187.547 323.394 187.547 323.394C187.547 323.394 192.499 321.623 194.719 320.827L258.469 297.961C262.725 296.43 272.547 292.894 272.547 292.894L272.547 277.861L272.547 196.927L272.547 181.894C272.547 181.894 263.412 178.61 258.435 176.827C258.435 176.827 251.675 174.404 242.547 171.131L242.547 193.769L245.221 194.727L242.547 195.686L242.547 196.861L242.547 211.894C242.547 211.894 232.725 215.43 228.469 216.961L176.922 235.45L176.922 296.927L123.797 277.894L123.797 230.282L102.547 222.66Z"/>
+              </svg>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="hidden grid"
+              id="tabs-with-card-3" role="tabpanel" aria-labelledby="tabs-with-card-item-3"
+            >
+              <!-- Image -->
+              <div
+                class="bg-[url('assets/mold.jpg')] bg-cover opacity-80 bg-center col-span-2"
+              >
+              </div>
+              <!-- Card content -->
+              <div class="card-content col-span-4 flex flex-col gap-8 py-8 sm:py-10 px-6 sm:px-10 md:px-14 z-10">
+                <h3 class="text-2xl sm:text-3xl font-semibold">Литьё</h3>
+                <div class="flex flex-col gap-3">
+                  <p>Выполняем услуги изготовления изделий с помощью литья в гибкие силиконовые формы. Эта технология лучше подходит для получения партий пластиковых изделий (10-100 шт.)</p>
+            
+                  <p>Также возможно литьё изделий под давлением. Эта технология применима для получения изделий из пластмасс, алюминия, латуни, цинка и др. партиями от 1000 шт.</p>
+                </div>
+                
+                <button
+                  type="button"
+                  class="rounded px-8 py-4 sm:text-lg md:text-xl font-medium bg-primary shadow shadow-primary/50 text-white 
+                  text-nowrap transition-all hover:opacity-80 w-full md:w-min flex items-center gap-4 justify-between md:justify-normal"
+                  data-hs-overlay="#hs-scroll-modal-mold"
+                >
+                  Узнать больше
+        
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </button>
+
+              </div>
+              <svg
+               class="size-44 fill-gray-200/70 absolute -z-5 -right-10 bottom-9"
+                width="173" height="143" viewBox="0 0 190 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M173 -2.96851C173 3.11353 168.168 8.72251 160.025 13.2502C150.192 18.6903 135.528 22.5422 118.701 23.6911C117.451 23.0829 116.201 22.5084 114.883 22.0016C101.57 16.4264 83.8645 13.2502 64.875 13.2502C62.0705 13.2502 59.3336 13.3178 56.5967 13.453L56.225 13.2502C48.0818 8.72251 43.25 3.11353 43.25 -2.96851C43.25 -17.9033 72.3086 -29.9998 108.125 -29.9998C143.941 -29.9998 173 -17.9033 173 -2.96851ZM54.299 24.4344C57.7455 24.1979 61.2934 24.0627 64.875 24.0627C85.8918 24.0627 104.543 28.2188 116.403 34.6725C124.783 39.234 129.75 44.9106 129.75 51.094C129.75 52.4456 129.513 53.7633 129.04 55.0473C127.486 59.5075 123.296 63.596 117.214 67.0424C117.18 67.0762 117.113 67.0762 117.079 67.11C116.978 67.1776 116.876 67.2114 116.775 67.279C104.949 73.834 86.0945 78.0915 64.875 78.0915C44.7367 78.0915 26.7271 74.2733 14.7996 68.2588C14.1576 67.9547 13.5494 67.6168 12.9412 67.279C4.83184 62.785 -3.86428e-07 57.176 -3.59468e-07 51.094C-3.07345e-07 39.3354 18.0434 29.3001 43.25 25.617C46.7979 25.1102 50.4809 24.7047 54.299 24.4344ZM140.562 51.094C140.562 43.6942 136.981 37.6122 132.419 33.0506C141.982 31.5639 150.733 29.1987 158.167 26.1239C163.674 23.8262 168.81 20.9879 173 17.5077L173 29.469C173 35.9903 167.425 42.0047 158.2 46.6676C153.267 49.168 147.253 51.2967 140.495 52.9186C140.529 52.3104 140.562 51.736 140.562 51.1278L140.562 51.094ZM129.75 83.5315C129.75 89.6135 124.918 95.2225 116.775 99.7502C116.167 100.088 115.559 100.392 114.917 100.73C103.023 106.745 85.0133 110.563 64.875 110.563C43.6555 110.563 24.8012 106.305 12.975 99.7502C4.83184 95.2225 -5.30215e-07 89.6135 -5.03255e-07 83.5315L-4.50233e-07 71.5702C4.22363 75.0504 9.32578 77.8887 14.8334 80.1864C28.1801 85.7616 45.8855 88.9377 64.875 88.9377C83.8645 88.9377 101.57 85.7616 114.917 80.1864C117.552 79.1051 120.086 77.8549 122.485 76.5034C124.546 75.3545 126.472 74.0706 128.297 72.719C128.804 72.3473 129.277 71.9418 129.75 71.5702L129.75 72.719L129.75 74.645L129.75 83.5315ZM140.562 83.5315L140.562 72.719L140.562 63.9676C146.982 62.5485 152.896 60.7577 158.167 58.5614C163.674 56.2637 168.81 53.4254 173 49.9452L173 61.9065C173 65.4543 171.311 69.0022 167.965 72.3473C162.458 77.8549 152.76 82.3827 140.495 85.3223C140.529 84.7479 140.562 84.1397 140.562 83.5315ZM64.875 121.375C83.8645 121.375 101.57 118.199 114.917 112.624C120.424 110.326 125.56 107.488 129.75 104.008L129.75 115.969C129.75 130.904 100.691 143 64.875 143C29.0586 143 -7.13244e-07 130.904 -6.47042e-07 115.969L-5.94021e-07 104.008C4.22363 107.488 9.32578 110.326 14.8334 112.624C28.1801 118.199 45.8855 121.375 64.875 121.375Z"/>
+              </svg>
+            </div>
+            <!-- Card 4 -->
+            <div
+              class="hidden grid"
+              id="tabs-with-card-4" role="tabpanel" aria-labelledby="tabs-with-card-item-4"
+            >
+              <!-- Image -->
+              <div
+                class="bg-[url('assets/machining.jpg')] bg-cover opacity-80 bg-right col-span-2"
+              >
+              </div>
+              <!-- Card content -->
+              <div class="card-content col-span-4 flex flex-col gap-8 py-8 sm:py-10 px-6 sm:px-10 md:px-14 z-10">
+                <h3 class="text-2xl sm:text-3xl font-semibold">Механическая обработка</h3>
+                <div class="flex flex-col gap-3">
+                  <p>Выполняем механичекую обработку изделий из различных видов стали на металлорежущих станках. 
+                    Такая обработка обеспечивает высокую точность и оптимальное качество создаваемых изделий.
+                  </p>
+
+                  <ul class="marker:text-amber-400 list-disc ml-4 mt-1">
+                    <li>Фрезерование</li>
+                    <li>Токарная обработка</li>
+                    <li>Шлифование</li>
+                    <li>Электроэрозионная резка</li>
+                    <li>и др.</li>
+                  </ul>
+                </div>
+                
+                <button
+                  type="button"
+                  class="rounded px-8 py-4 sm:text-lg md:text-xl font-medium bg-primary shadow shadow-primary/50 text-white 
+                  text-nowrap transition-all hover:opacity-80 w-full md:w-min flex items-center gap-4 justify-between md:justify-normal"
+                  data-hs-overlay="#hs-scroll-modal-machine"
+                >
+                  Узнать больше
+        
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </button>
+
+              </div>
+              
+
+              <svg
+                class="size-44 fill-gray-200/70 absolute -z-5 -right-8 bottom-9"
+                width="173" height="210" viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg"
+              >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M184.863 114.421L184.973 114.208L207.252 132.306C209.26 133.834 210.736 135.14 210.736 135.14L184.171 179.779L153.596 167.032L153.815 166.606C148.096 170.921 141.854 174.478 135.196 177.171L135.303 177.173L130.852 205.509C130.496 208.076 130.149 210 130.149 210L78.3724 209.282L74.0259 176.216L74.3461 176.221C67.6591 173.342 61.6245 169.615 56.0272 165.143L56.2348 165.575L25.318 177.47L0 132.111L3.5616 129.374L26.2256 112.007L26.3294 112.223C25.8447 108.68 25.5749 105.033 25.6254 101.39C25.6759 97.7471 26.0437 94.323 26.5198 90.7933L26.41 91.0061L0.646561 70.074L27.3221 25.222L57.8943 38.1837L57.786 38.2893C63.3968 34.0807 69.5324 30.5223 76.19 27.8284L76.0832 27.8269L81.2366 -5L133.227 -4.27917L137.683 28.5738L137.577 28.5724C144.157 31.4498 150.192 35.1769 155.684 39.5395L155.578 39.4309L186.39 27.4274L211.705 73.0002L185.371 93.21L185.267 92.9943C185.645 96.5358 185.918 99.9687 185.867 103.612C185.817 107.254 185.339 110.891 184.863 114.421ZM97.2777 112.179C99.686 114.591 102.582 115.798 105.967 115.798C109.352 115.798 112.25 114.591 114.663 112.179C117.071 109.771 118.275 106.874 118.275 103.49C118.275 100.105 117.071 97.2065 114.663 94.7942C112.25 92.3859 109.352 91.1818 105.967 91.1818C102.582 91.1818 99.686 92.3859 97.2777 94.7942C94.8654 97.2065 93.6592 100.105 93.6592 103.49C93.6592 106.874 94.8654 109.771 97.2777 112.179ZM68.9697 144.795C79.4806 154.182 91.8131 158.875 105.967 158.875C113.66 158.875 120.866 157.414 127.586 154.493C134.302 151.568 140.148 147.617 145.125 142.641C150.097 137.669 154.046 131.822 156.971 125.102C159.892 118.386 161.352 111.182 161.352 103.49C161.352 95.7973 159.892 88.591 156.971 81.8709C154.046 75.155 150.097 69.3087 145.125 64.3322C140.148 59.3599 134.302 55.4111 127.586 52.4859C120.866 49.5649 113.66 48.1043 105.967 48.1043C97.5567 48.1043 89.5833 49.8992 82.0468 53.489C74.5062 57.0788 68.1205 62.1558 62.8896 68.72V54.2583H50.5818V91.1818H87.5053V78.874H70.582C74.7872 73.1303 79.9668 68.6174 86.1207 65.3353C92.2746 62.0532 98.8901 60.4122 105.967 60.4122C117.967 60.4122 128.146 64.5907 136.503 72.9477C144.864 81.3089 149.045 91.4895 149.045 103.49C149.045 115.49 144.864 125.668 136.503 134.025C128.146 142.387 117.967 146.567 105.967 146.567C95.1977 146.567 85.7863 143.08 77.7329 136.105C69.6835 129.131 64.9409 120.31 63.505 109.644H50.8895C52.4279 123.695 58.4547 135.412 68.9697 144.795Z"/>
+              </svg>
+            </div>
+
+          </div>
+
+          <img 
+            src="assets/Ellipse 3.svg" alt="" 
+            class="w-4/5 sm:w-1/2 lg:w-2/5 absolute -z-20 opacity-60
+            -left-16 md:-left-40
+            -bottom-20 md:-bottom-40"
+          >
+        </div>
+
+        <!-- End Tab Content -->
+      </div>
+
+
+
+    </section>
+    <!-- ========== END SERVICES ========== -->
+
+    <!-- ========= INFO MODALS ============ -->
+
+    <!-- ПРОЕКТИРОВАНИЕ -->
+    <div 
+      id="hs-scroll-modal-design" 
+      class="hs-overlay hs-overlay-backdrop-open:bg-black/50 hs-overlay-backdrop-open:backdrop-blur-md hidden
+      size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+    >
+      <!-- Modal body -->
+      <div 
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-300 px-3
+        mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full mx-auto h-[calc(100%-3.5rem)]"
+      >
+        <div 
+          class="max-h-full overflow-hidden flex flex-col bg-gray-100 border shadow-sm rounded-lg pointer-events-auto"
+        >
+          <!-- Modal header -->
+          <div class="flex justify-between items-center px-6 md:px-12 pt-6 md:pt-8 pb-6">
+
+            <h3 class="sm:ml-16 flex-grow sm:text-center text-xl sm:text-2xl md:text-3xl font-semibold opacity-80 bg-gradient-to-r from-primary to-primary-950 bg-clip-text text-transparent">
+              Проектирование изделий
+            </h3>
+
+            <button type="button" class="flex justify-center items-center size-12 text-sm font-semibold rounded border border-transparent text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-scroll-modal-design">
+              <span class="sr-only">Close</span>
+
+              <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- MODAL CONTENT -->
+          <div class="px-6 md:px-12 lg:pr-10 pb-14 pt-2 overflow-y-auto text-gray-600 sm:text-pretty text-base md:text-lg indent-5">
+            <div class="flex flex-col gap-7 sm:gap-10">
+              <div>
+                <p>Штампы и пресс-формы служат оснасткой для одного из самых прогрессивных и распространенных способов обработки материалов — обработки давлением.</p>
+                <p class="mt-3">Обработке давлением подвергаются металлы и их сплавы, а также различные неметаллические материалы, находящие все большее и большее распространение в машиностроении.</p>
+              </div>
+
+              <!-- Image container -->
+              <div class="grid grid-cols-3 w-full gap-3 items-center justify-items-center">
+                <img src="assets/form2.png" alt="Пресс-форма в разрезе" class="">
+                <img src="assets/form1.png" alt="Общий вид пресс-формы" class="">
+                <img src="assets/form3.png" alt="Деталь из пресс-формы" class="">
+              </div>
+
+              <!-- Пресс-формы -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Пресс-формы</h4>
+
+                <p>
+                  Пресс-форма — устройство для формирования изделий разной конструкции из пластмасс, 
+                  резины, металлов и другого сырья под действием давления на литьевых машинах.
+                </p>
+
+                <p>По принципу действия пресс-формы делятся на:</p>
+
+                <ul class="marker:text-amber-400 list-disc ml-5 flex flex-col gap-3">
+                  <li>
+                    <strong>Прямого прессования</strong> 
+                    
+                    <p class="mt-1 indent-0">
+                      Используют для разработки объектов простой формы. Ввиду высокой стоимости производства их не
+                      применяют для изготовления больших партий продукции. Конструкция пресс-формы включает матрицу, на которую выкладывается сырье,
+                      и пуансон для его уплотнения. Зажатый между двумя элементами материал утончается и заполняет все углубления формы.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Литьевого прессования</strong> 
+                    <p class="mt-1 indent-0">
+                      Главным преимуществом является возможность изготовления больших партий продукции
+                      разной конфигурации и сложности. Перед прессованием они находятся в сомкнутом состоянии. Заливка сырья в них
+                      осуществляется при помощи отдельной загрузочной камеры (верхней или нижней).
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Штампы -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Штампы</h4>
+
+                <p>
+                  Штамповка металла — процедура, при выполнении которой меняются форма и размеры металлических заготовок. Основным принципом воздействия на детали является давление.
+                </p>
+
+                <p>Штампы холодной штамповки можно разделить на следующие типы:</p>
+
+                <ul class="marker:text-amber-400 list-disc ml-5 flex flex-col gap-3">
+                  <li class="mt-1 indent-0">
+                    <strong>Вырубные штампы</strong>, с помощью которых производят вырезку из листового металла деталей различных конфигураций, а также заготовок, поступающих после вырубки на другие операции. Включают в себя вырубные, отрезные, дыропробивные и обрезные штампы .
+                  </li>
+
+                  <li class="mt-1 indent-0">
+                    <strong>Гибочные штампы</strong>, которые изменяют форму детали, изгибая её вокруг одной или нескольких осей.
+                  </li>
+
+                  <li class="mt-1 indent-0">
+                    <strong>Вытяжные штампы</strong>, в которых детали придается выпуклая или вогнутая сосудообразная форма.
+                  </li>
+
+                  <li class="mt-1 indent-0">
+                    <strong>Обжимные и чеканочные штампы</strong>, которые изменяют форму детали за счёт перераспределения металла заготовки. К обжимным штампам относятся штампы для высадки головок заклепок, а к чеканочным — штампы для образования рельефа на поверхности деталей.
+                  </li>
+
+                  <li class="mt-1 indent-0">
+                    <strong>Комбинированные штампы</strong>, которые одновременно выполняют две или несколько из перечисленных выше функций штампов.
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Оснастка -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Оснастка</h4>
+
+                <p>
+                  Технологическая оснастка — это совокупность приспособлений для установки и закрепления заготовки и инструментов, выполнения сборочных операций, транспортировки заготовок, изделий и деталей.
+                </p>
+              </div>
+
+              <!-- Нестандартные изделия -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Нестандартные изделия</h4>
+
+                <p>
+                  Проектирование нестандартного оборудования — это точный расчёт оборудования на соответствие всем требованиям, описанным в техническом 
+                  задании клиента: уровню производительности, интенсивности использования, климатическим условиям эксплуатации и т.д.
+                </p>
+              </div>
+              
+              <!-- Обратный инжиниринг -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Обратный инжиниринг</h4>
+
+                <p>
+                  Обратный инжиниринг, он же реверс-инжиниринг — процесс, который предназначен для разработки или копирования изделий по уже готовому образцу 
+                  (как целому, так и частично поврежденному) в готовую параметрическую 3D-модель (CAD модель) для последующего производства или восстановления документации, 
+                  чертежей и т.д. 
+                </p>
+
+                <p>
+                  Данная технология широко применяется в промышленных направлениях, таких как машино- и судостроение, а также в аэрокосмической сфере.
+                </p>
+
+                <!-- RE slider -->
+                <div class="swiper swiper-modal-RE w-full mt-4 relative fill-gray-400 pb-1 indent-0">
+                  <div class="swiper-wrapper *:shadow">
+                    <!-- Slides -->
+                    <div class="swiper-slide rounded-md flex flex-col overflow-hidden">
+                      <img src="assets/slides/RE-1.png" alt="" class="w-full h-32 object-cover">
+
+                      <p class="p-6"><strong>Этап 1</strong><br>3D-сканирование объета через облако точек</p>
+                    </div>
+
+                    <div class="swiper-slide rounded-md flex flex-col overflow-hidden">
+                      <img src="assets/slides/RE-2.png" alt="" class="w-full h-32 object-cover">
+
+                      <p class="p-6"><strong>Этап 2</strong><br>Преобразование в полигональную модель</p>
+                    </div>
+
+                    <div class="swiper-slide rounded-md flex flex-col overflow-hidden">
+                      <img src="assets/slides/RE-3.png" alt="" class="w-full h-32 object-cover">
+
+                      <p class="p-6"><strong>Этап 3</strong><br>Сегментация полигональной модели</p>
+                    </div>
+
+                    <div class="swiper-slide rounded-md flex flex-col overflow-hidden">
+                      <img src="assets/slides/RE-4.png" alt="" class="w-full h-32 object-cover">
+
+                      <p class="p-6"><strong>Этап 4</strong><br>Создание параметрической CAD-модели</p>
+                    </div>
+
+                    <div class="swiper-slide rounded-md flex flex-col overflow-hidden">
+                      <img src="assets/slides/RE-5.png" alt="" class="w-full h-32 object-cover">
+
+                      <p class="p-6"><strong>Этап 5</strong><br>Проверка модели как единое твердое тело в CAD ПО</p>
+                    </div>
+
+                    <div class="swiper-slide rounded-md flex flex-col overflow-hidden">
+                      <img src="assets/slides/RE-6.png" alt="" class="w-full h-32 object-cover">
+
+                      <p class="p-6"><strong>Этап 6</strong><br>Анализ отклонений полученной CAD-модели</p>
+                    </div>
+                    
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-pagination swiper-pagination-RE mt-2"></div>
+
+                  <!-- <div class="swiper-button-prev modal-RE-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-RE-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D-ПЕЧАТЬ -->
+    <div 
+      id="hs-scroll-modal-3dprint" 
+      class="hs-overlay hs-overlay-backdrop-open:bg-black/50 hs-overlay-backdrop-open:backdrop-blur-md hidden
+      size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+    >
+      <!-- Modal body -->
+      <div 
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-300 px-3
+        mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full mx-auto h-[calc(100%-3.5rem)]"
+      >
+        <div 
+          class="max-h-full overflow-hidden flex flex-col bg-gray-100 border shadow-sm rounded-lg pointer-events-auto"
+        >
+          <!-- Modal header -->
+          <div class="flex justify-between items-center px-6 md:px-12 pt-6 md:pt-8 pb-6">
+
+            <h3 class="sm:ml-16 flex-grow sm:text-center text-xl sm:text-2xl md:text-3xl font-semibold opacity-80 bg-gradient-to-r from-primary to-primary-950 bg-clip-text text-transparent">
+              3D-печать
+            </h3>
+
+            <button type="button" class="flex justify-center items-center size-12 text-sm font-semibold rounded border border-transparent text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-scroll-modal-3dprint">
+              <span class="sr-only">Close</span>
+
+              <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- MODAL CONTENT -->
+          <div class="px-6 md:px-12 lg:pr-10 pb-14 pt-2 overflow-y-auto text-gray-600 sm:text-pretty text-base md:text-lg indent-5">
+            <div class="flex flex-col gap-7 sm:gap-10">
+
+              <!-- Пластик -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Пластик</h4>
+
+                <p>
+                  FDM (Fused Deposition Modeling) — печать методом послойного наплавления. Технология FDM подразумевает создание трехмерных 
+                  объектов за счет нанесения последовательных слоев пластика, из твердых и резиноподобных материалов.
+                </p>
+
+                <p>
+                  Наши специалисты подберут материал, исходя из потребностей заказчика по прочности, качеству поверхности и оказываемому на изделие воздействию.
+                  Возможна последующая механическая и химическая обработка изделия, а также окрашивание в требуемый цвет.
+                </p>
+
+                <!-- FDM slider -->
+                <div class="swiper swiper-modal-1 w-full h-40 mt-4 relative fill-gray-400 pb-1">
+                  <div class="swiper-wrapper *:shadow overflow-y-visible">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-[url('assets/slides/fdm-1.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/fdm-2.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/fdm-3.jfif')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/fdm-4.jfif')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/fdm-5.jfif')] bg-cover bg-center rounded-md"></div>
+                    
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-button-prev modal-1-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-1-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Фотополимер -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Фотополимер</h4>
+
+                <p>
+                  SLA (Stereolithography Apparatus) — в данной технологии объект создается путем селективного отверждения полимерной смолы, 
+                  слой за слоем, с использованием ультрафиолетового лазерного луча.
+                  Модели, напечатанные на принтерах SLA, имеют самое высокое разрешение и точность, самую четкую детализацию и самую гладкую 
+                  поверхность по сравнению с другими технологиями 3D-печати.
+                </p>
+
+                <p>
+                  Производители материалов разработали инновационные формулы для стереолитографических полимеров с широким спектром оптических, 
+                  механических и термических свойств, аналогичных свойствам стандартных, инженерных и промышленных термопластических смол.
+                </p>
+
+                <!-- SLA slider -->
+                <div class="swiper swiper-modal-2 w-full h-40 mt-4 relative fill-gray-100 pb-1">
+                  <div class="swiper-wrapper *:shadow overflow-y-visible">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-[url('assets/slides/sla-1.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/sla-2.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/sla-3.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/sla-4.png')] bg-cover bg-center rounded-md"></div>
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-button-prev modal-2-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-2-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Полиамид -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Полиамид</h4>
+
+                <p>
+                  SLS (Selective Laser Sintering) — технология аддитивного производства, в которой используется мощный лазер для спекания мелких 
+                  частиц полимерного порошка в прочную структуру на основе 3D-модели.
+                </p>
+
+                <p>
+                  Одной из характерных особенностей данной технологии является возможность печати без использования поддержек. Готовые изделия могут 
+                  отличаться сложной геометрией, а также характеризуются высокой точностью изготовления.
+                </p>
+
+                <!-- SLS slider -->
+                <div class="swiper swiper-modal-3 w-full h-40 mt-4 relative fill-gray-100 pb-1">
+                  <div class="swiper-wrapper *:shadow overflow-y-visible">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-[url('assets/slides/sls-1.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/sls-2.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/sls-3.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/sls-4.jpg')] bg-cover bg-center rounded-md"></div>
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-button-prev modal-3-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-3-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              
+
+              <!-- Металл -->
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Металл</h4>
+
+                <p>
+                  SLM (Selective Laser Melting) — селективное (выборочное) лазерное плавление. Оно представляет собой изготовление сложных по форме и структуре изделий из металлических порошков по CAD-моделям. 
+                  Процесс заключается в последовательном послойном расплавлении порошкового материала посредством мощного лазерного излучения.
+                </p>
+
+                <p>
+                  SLM открывает широчайшие возможности, так как позволяет создавать металлические изделия высокой точности и плотности, оптимизировать конструкцию и снизить вес производимых деталей. 
+                  Зачастую, в сравнении с традиционными методами металлообработки, SLM-печать является более быстрым и выгодным способом, а иногда и единственно возможным.
+                </p>
+
+                <!-- SLM slider -->
+                <div class="swiper swiper-modal-4 w-full h-40 mt-4 relative fill-gray-100 pb-1">
+                  <div class="swiper-wrapper *:shadow overflow-y-visible">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-[url('assets/slides/slm-1.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/slm-2.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/slm-3.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/slm-4.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/slm-5.png')] bg-cover bg-center rounded-md"></div>
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-button-prev modal-4-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-4-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- ЛИТЬЁ -->
+    <div 
+      id="hs-scroll-modal-mold" 
+      class="hs-overlay hs-overlay-backdrop-open:bg-black/50 hs-overlay-backdrop-open:backdrop-blur-md hidden
+      size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+    >
+      <!-- Modal body -->
+      <div 
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-300 px-3
+        mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full mx-auto h-[calc(100%-3.5rem)]"
+      >
+        <div 
+          class="max-h-full overflow-hidden flex flex-col bg-gray-100 border shadow-sm rounded-lg pointer-events-auto"
+        >
+          <!-- Modal header -->
+          <div class="flex justify-between items-center px-6 md:px-12 pt-6 md:pt-8 pb-6">
+
+            <h3 class="sm:ml-16 flex-grow sm:text-center text-xl sm:text-2xl md:text-3xl font-semibold opacity-80 bg-gradient-to-r from-primary to-primary-950 bg-clip-text text-transparent">
+              Литьё
+            </h3>
+
+            <button type="button" class="flex justify-center items-center size-12 text-sm font-semibold rounded border border-transparent text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-scroll-modal-mold">
+              <span class="sr-only">Close</span>
+
+              <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- MODAL CONTENT -->
+          <div class="px-6 md:px-12 lg:pr-10 pb-14 pt-2 overflow-y-auto text-gray-600 sm:text-pretty text-base md:text-lg indent-5">
+            <div class="flex flex-col gap-7 sm:gap-10">
+
+              <div class="flex flex-col gap-3">
+                <!-- <h4 class="text-xl font-semibold sm:text-center">Пластик</h4> -->
+
+                <p>
+                  Литьё в силиконовые формы — технология изготовления мелкосерийных партий изделий из пластмасс, полиуретанов и других полимерных материалов. 
+                  Она заключается в воспроизведении полноценных копий по прототипу (образец или 3D-модель) с заданными параметрами из сырья с требуемыми характеристиками в любом цветовом решении.
+                </p>
+                
+                <p>
+                  Литье под давлением — технология изготовления крупносерийных партий изделий в термопластавтоматах (инжекционных литьевых машинах, в которых сырьё из определенного 
+                  вида пластмасс нагревается, приводится в жидкое агрегатное состояние, потом под давлением подается в пресс-форму).
+                </p>
+
+                <!-- mold slider -->
+                <div class="swiper swiper-modal-mold w-full h-40 mt-4 relative fill-gray-200 pb-1">
+                  <div class="swiper-wrapper *:shadow overflow-y-visible">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-[url('assets/slides/mold-1.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/mold-2.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/mold-3.jpg')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/mold-4.jpg')] bg-cover bg-center rounded-md"></div>
+                    
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-button-prev modal-mold-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-mold-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- МЕХОБРАБОТКА -->
+    <div 
+      id="hs-scroll-modal-machine" 
+      class="hs-overlay hs-overlay-backdrop-open:bg-black/50 hs-overlay-backdrop-open:backdrop-blur-md hidden
+      size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+    >
+      <!-- Modal body -->
+      <div 
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-300 px-3
+        mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full mx-auto h-[calc(100%-3.5rem)]"
+      >
+        <div 
+          class="max-h-full overflow-hidden flex flex-col bg-gray-100 border shadow-sm rounded-lg pointer-events-auto"
+        >
+          <!-- Modal header -->
+          <div class="flex justify-between items-center px-6 md:px-12 pt-6 md:pt-8 pb-6">
+
+            <h3 class="sm:ml-16 flex-grow sm:text-center text-xl sm:text-2xl md:text-3xl font-semibold opacity-80 bg-gradient-to-r from-primary to-primary-950 bg-clip-text text-transparent">
+              Механическая обработка
+            </h3>
+
+            <button type="button" class="flex justify-center items-center size-12 text-sm font-semibold rounded border border-transparent text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-scroll-modal-machine">
+              <span class="sr-only">Close</span>
+
+              <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- MODAL CONTENT -->
+          <div class="px-6 md:px-12 lg:pr-10 pb-14 pt-2 overflow-y-auto text-gray-600 sm:text-pretty text-base md:text-lg indent-5">
+            <div class="flex flex-col gap-7 sm:gap-10">
+
+              
+
+              <div class="flex flex-col gap-3">
+                <p>
+                  Металлообработка – это комплекс работ технологического характера, который позволяет изменять размеры, конфигурационные параметры, а также, качественные характеристики специальных заготовок из сплавов или металлов. Существуют различные способы механической обработки металлов, имеющие ряд существенных различий, в зависимости от применяемых инструментов и общей методики выполнения работы. 
+                </p>
+
+                <!-- machine slider -->
+                <div class="swiper swiper-modal-mach w-full h-40 mt-4 relative fill-gray-200 pb-1">
+                  <div class="swiper-wrapper *:shadow">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-[url('assets/slides/mach-1.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/mach-2.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/mach-3.png')] bg-cover bg-center rounded-md"></div>
+                    <div class="swiper-slide bg-[url('assets/slides/mach-4.png')] bg-cover bg-center rounded-md"></div>
+                    
+                  </div>
+                  <!-- Buttons -->
+                  <div class="swiper-button-prev modal-mach-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                  </div>
+                  <div class="swiper-button-next modal-mach-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Фрезерование</h4>
+
+                <p>
+                  Метод, суть которого заключается в обработке фрезами, оснащаемыми режущими лезвиями, 
+                  располагающимися по спирали. Такие рабочие элементы устанавливаются во фрезерные станки и вращаются с нужной скоростью. 
+                  На них подаются заготовки, с которых снимаются поверхностные слои в виде стружки. 
+                  Фрезеруемые детали могут располагаться горизонтально, под углом, вертикально. Фрезерование может быть периферийным, торцевым, фасонным, концевым.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Точение</h4>
+
+                <p>
+                  Выполняется на токарных станках, в которых устанавливаются резцы. Заготовка крепится на шпинделе и осуществляет 
+                  вращения вокруг собственной оси. Резец же движется в продольном, поперечном или комбинированном поперечно-продольном направлении.
+                </p>
+
+                <p>
+                  Точение бывает черновым, выполняемым на первых этапах металлообработки, а также чистовым, которое формирует окончательные формы, 
+                  размеры и  гладкость, подготавливает детали к установке в конструкции, к эксплуатации.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Сверление</h4>
+
+                <p>
+                  Его можно отнести к технологии резания. Цель — сформировать сквозное либо глухое отверстие необходимых глубины и диаметра. 
+                  Для этого используют свёрла, которые имеют заострённые кромки и быстро вращаются. Отверстия требуются для фиксации 
+                  крепежа типа болтов, а также для дальнейшего создания резьбы.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Шлифование</h4>
+
+                <p>
+                  Шлифование — обычно завершающий этап. При нём с поверхности изделия убирается тончайший слой, который по толщине иногда не 
+                  превышает несколько микрон. Работы проводятся шлифовальными вращающимися кругами. Они различаются по зернистости, то есть 
+                  величине зёрен (абразивных частичек). Материалы кругов определяются по составу шлифуемых металлоизделий, а зернистость зависит от требуемой гладкости: чем она выше, тем мельче зёрна.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <h4 class="text-xl font-semibold sm:text-center">Электроэрозионная технология</h4>
+
+                <p>
+                  Разрушение поверхностных слоёв в этом случае запускается мощными разрядами тока, возникающими между материалом и электродом. В зоне влияния повышается температура, выделяющаяся тепловая энергия буквально испаряет малые количества металлов, образуя эрозионные выемки. Метод подходит для отверстий разной сложности, для самых твёрдых материалов.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- <section class="bg-gray-300 h-20">
+      <h2 >Наши работы / Портфолио --- Галерея</h2>
+    </section> -->
+
+
+
+    <!-- ========== PROCESS ========== -->
+    <section 
+      id="process"
+      class="bg-gray-100 overflow-x-clip"
+    >
+      <div class="max-w-7xl px-6 lg:px-10 xl:px-20 2xl:px-6 py-10 lg:pt-20  lg:pb-10 mx-auto relative z-0">
+
+        <!-- Title -->
+        <h2 
+          class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold text-gray-500 text-left mb-12 sm:mb-14 z-10
+          bg-gradient-to-r opacity-80 from-primary to-primary-950 bg-clip-text text-transparent"
+        >
+          Как мы работаем
+        </h2>
+ 
+
+        <!-- Process main illustration -->
+        <img 
+          src="assets/proto-comp.svg" alt="" 
+          class="absolute -z-10 w-3/5 md:w-1/2
+          -right-16 sm:-right-32 md:-right-14 top-36 sm:top-0 md:top-20"
+          data-aos="fade-left"
+          data-aos-anchor="#process"
+          data-aos-delay="400"
+          data-aos-duration="600"
+        >
+
+        <img 
+          src="assets/production-comp.svg" alt="" 
+          class="absolute -z-10 w-3/5 md:w-1/2 
+          right-0 sm:right-0 md:-right-10 lg:right-0 xl:right-20 -bottom-32 sm:-bottom-60 md:-bottom-20 xl:-bottom-32"
+          data-aos="fade-left"
+          data-aos-anchor="#process"
+          data-aos-delay="600"
+          data-aos-duration="600"
+        >
+
+
+        <!-- <div class="w-full h-full rounded-lg bg-[url('assets/example.jpg')] bg-cover bg-center shadow-md"></div> -->
+
+        <!-- Timeline ========================================================================  -->
+        <div class="z-10 sm:text-nowrap max-w-lg mx-auto md:mx-0 xl:px-6">
+          <!-- ============ Item 1 ============== -->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div 
+              class="relative pt-6 last:after:hidden
+              after:absolute after:top-10 after:bottom-0 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300"
+            >
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span 
+                  class="flex flex-shrink-0 justify-center items-center size-10
+                  bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg"
+                >
+                  1
+                </span>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 
+              mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="0"
+              data-aos-duration="400"
+            >
+            <!-- margin controls gap -- change -->
+              <svg
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                width="186" height="211" viewBox="0 0 186 211" fill="" xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0.0111983 192.23C-0.0119988 128.154 0.00803746 64.0767 0.00803746 0C31.8565 0 63.705 0 95.5535 0C114.669 19.2171 133.782 38.4374 152.883 57.6691C152.889 67.601 152.886 86.1832 152.886 96.1151L76.4471 172.767V192.23H0.0111983ZM133.776 67.2806L86.002 19.223C86.002 35.2422 86.0064 51.2614 85.9986 67.2806C101.925 67.2806 117.85 67.2806 133.776 67.2806Z"/>
+                <path d="M132.121 135.579L142.778 146.095L104.123 184.154L104.056 194.601L114.531 194.668L153.186 156.609L163.844 167.125L120.671 209.632L88.9958 209.429L89.1984 177.84L132.121 135.579ZM163.844 167.125L132.121 135.579L153.707 114.325L185.18 146.118L163.844 167.125Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">Заявка и ТЗ</h4>
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+
+          <!-- ================ Item 2 ============ -->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div class="relative pt-6 last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300">
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span class="flex flex-shrink-0 justify-center items-center size-10 bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg">
+                  2
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="100"
+              data-aos-duration="400"
+            >
+            <!-- margin controls gap -- change -->
+              <svg
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+              >
+                <path d="M445.33-171.67 232-296q-15.52-9.19-24.09-24.65-8.58-15.47-8.58-33.02v-248q0-17.55 8.58-33.01 8.57-15.46 24.09-24.65L446-785q15.67-9 34-9t34 9l214 125.67q15.52 9.19 24.09 24.65 8.58 15.46 8.58 33.01v248q0 17.55-8.75 33.02-8.75 15.46-24.59 24.65L512-171.67q-15.89 9-33.44 9-17.56 0-33.23-9ZM80-687.33v-126q0-27.5 19.58-47.09Q119.17-880 146.67-880h126v66.67h-126v126H80ZM272.67-80h-126q-27.5 0-47.09-19.58Q80-119.17 80-146.67v-126h66.67v126h126V-80Zm414.66 0v-66.67h126v-126H880v126q0 27.5-19.58 47.09Q840.83-80 813.33-80h-126Zm126-607.33v-126h-126V-880h126q27.5 0 47.09 19.58Q880-840.83 880-813.33v126h-66.67Zm-512.66 65-34 20v39.66l180 103.67v210.67L480-228.67l33.33-19.66V-459L694-562.67v-39.66l-34.67-20L480-518 300.67-622.33Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">3D-модель и правки</h4>
+                <!-- <p>Placeholder text.</p> -->
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+          <!-- ========== Item 3 =============== -->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div class="relative pt-6 last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300">
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span class="flex flex-shrink-0 justify-center items-center size-10 bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg">
+                  3
+                </span>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 
+              mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="200"
+              data-aos-duration="400"
+            >
+            <!-- margin controls gap -- change -->
+              <svg 
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"
+              >
+                <path d="M316-232h53.33v-85.33h85.34v-53.34h-85.34V-456H316v85.33h-85.33v53.34H316V-232Zm210-33.33h200.67V-318H526v52.67ZM526-370h200.67v-53.33H526V-370Zm39.33-159.33 59.34-59.34L684-529.33l38-38-59.33-60L722-686.67l-38-38-59.33 59.34-59.34-59.34-38 38 59.34 59.34-59.34 60 38 38ZM244-600.67h197.33V-654H244v53.33ZM186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840h586.66q27 0 46.84 19.83Q840-800.33 840-773.33v586.66q0 27-19.83 46.84Q800.33-120 773.33-120H186.67Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">Расчет стоимости</h4>
+                <!-- <p>Placeholder text.</p> -->
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+          <!-- ============= Item 4 =========== -->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div class="relative pt-6 last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300">
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span class="flex flex-shrink-0 justify-center items-center size-10 bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg">
+                  4
+                </span>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 
+              mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="300"
+              data-aos-duration="400"
+            >
+            <!-- margin controls gap -- change -->
+              <svg 
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+              >
+              <path d="m435.33-250 228-228L618-523.33l-183 183L338.33-437l-45 45 142 142ZM226.67-80q-27 0-46.84-19.83Q160-119.67 160-146.67v-666.66q0-27 19.83-46.84Q199.67-880 226.67-880H574l226 226v507.33q0 27-19.83 46.84Q760.33-80 733.33-80H226.67Zm314-542.67h192.66L540.67-813.33v190.66Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">Заключение договора</h4>
+                <!-- <p>Placeholder text.</p> -->
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+          <!-- ========= Item 5 =============-->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div class="relative pt-6 last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300">
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span class="flex flex-shrink-0 justify-center items-center size-10 bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg">
+                  5
+                </span>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 
+              mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-duration="400"
+            >
+            <!-- margin controls gap -- change -->
+              <svg 
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+              >
+                <path d="M106.67-160q-27.5 0-47.09-19.58Q40-199.17 40-226.67V-680h66.67v453.33H800V-160H106.67ZM240-293.33q-27.5 0-47.08-19.59-19.59-19.58-19.59-47.08v-373.33q0-27.5 19.59-47.09Q212.5-800 240-800h613.33q27.5 0 47.09 19.58Q920-760.83 920-733.33V-360q0 27.5-19.58 47.08-19.59 19.59-47.09 19.59H240ZM333.33-360q0-39-27.16-66.17Q279-453.33 240-453.33V-360h93.33ZM760-360h93.33v-93.33q-39 0-66.16 27.16Q760-399 760-360Zm-213.33-66.67q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM240-640q39 0 66.17-27.17 27.16-27.16 27.16-66.16H240V-640Zm613.33 0v-93.33H760q0 39 27.17 66.16Q814.33-640 853.33-640Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">Предоплата</h4>
+                <!-- <p>Placeholder text.</p> -->
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+            
+          <!-- ============= Item 6 ============= -->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div class="relative pt-6 last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300">
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span class="flex flex-shrink-0 justify-center items-center size-10 bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg">
+                  6
+                </span>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 
+              mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="500"
+              data-aos-duration="400"
+            >
+              <svg 
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"
+              >
+                <path d="m382-80-18.67-126.67q-17-6.33-34.83-16.66-17.83-10.34-32.17-21.67L178-192.33 79.33-365l106.34-78.67q-1.67-8.33-2-18.16-.34-9.84-.34-18.17 0-8.33.34-18.17.33-9.83 2-18.16L79.33-595 178-767.67 296.33-715q14.34-11.33 32.34-21.67 18-10.33 34.66-16L382-880h196l18.67 126.67q17 6.33 35.16 16.33 18.17 10 31.84 22L782-767.67 880.67-595l-106.34 77.33q1.67 9 2 18.84.34 9.83.34 18.83 0 9-.34 18.5Q776-452 774-443l106.33 78-98.66 172.67-118-52.67q-14.34 11.33-32 22-17.67 10.67-35 16.33L578-80H382Zm98.67-266.67q55.33 0 94.33-39T614-480q0-55.33-39-94.33t-94.33-39q-55.67 0-94.5 39-38.84 39-38.84 94.33t38.84 94.33q38.83 39 94.5 39Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">Процесс</h4>
+                <!-- <p>Placeholder text.</p> -->
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+          <!-- ============= Item 7 ============= -->
+          <div class="flex gap-x-5 ms-1 group">
+            <!-- Icon -->
+            <div class="relative pt-6 last:after:hidden after:absolute after:top-0 after:bottom-20 after:start-4 after:w-0.5 after:-translate-x-[0.5px] after:bg-gray-300">
+              <div class="relative z-10 size-8 flex justify-center items-center">
+                <span class="flex flex-shrink-0 justify-center items-center size-10 bg-gray-200  text-gray-700 font-bold text-lg uppercase rounded-lg">
+                  7
+                </span>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div 
+              class="grow bg-gray-50 rounded shadow p-6 text-base lg:text-lg text-gray-400 flex gap-6 
+              mb-6"
+              data-aos-anchor="#process"
+              data-aos="fade-down"
+              data-aos-delay="600"
+              data-aos-duration="400"
+            >
+              <svg 
+                class="size-8 fill-gray-300 group-hover:fill-primary transition-all"
+                xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"
+              >
+              <path d="M246.67-40v-338.33L118-586.67 299-880h362l181 293.33-128.67 208.34V-40L480-118 246.67-40ZM336-813.33 196-586.67 336-360h288l140-226.67-140-226.66H336ZM438-433 305.33-564.67 353-612.33l85 85 169-170 47.67 46.66L438-433Z"/>
+              </svg>
+
+              <div>
+                <h4 class="text-gray-600 text-xl font-medium">Сдача проекта</h4>
+                <!-- <p>Placeholder text.</p> -->
+              </div>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+        </div>
+        <!-- End Timeline -->
+        <!-- End Grid -->
+      </div>
+    </section>
+    <!-- ========== END PROCESS ========== -->
+
+    <!-- ========== GALLERY ========== -->
+    <section 
+      id="gallery"
+      class="bg-gray-100 overflow-x-clip"
+    >
+      <div class="max-w-7xl px-6 lg:px-10 xl:px-20 2xl:px-6 pt-28 sm:pt-36 md:pt-32 pb-10 mx-auto relative z-0">
+
+        <!-- Title -->
+        <h2 
+          class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold text-gray-500 text-left mb-12 sm:mb-14 z-10
+          bg-gradient-to-r opacity-80 from-primary to-primary-950 bg-clip-text text-transparent"
+        >
+          Галерея проектов
+        </h2>
+ 
+        <!-- Gallery grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 grid-rows-8 sm:grid-rows-6 md:grid-rows-5 w-full gap-4 *:rounded-md relative z-10">
+          <div class="bg-[url(/assets/slides/fdm-1.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center"></div>
+
+          <div class="bg-[url(/assets/slides/sla-4.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center"></div>
+
+          <div class="swiper swiper-gallery-1 w-full relative fill-gray-100 row-start-1 row-end-3 col-start-1 sm:col-start-2 md:col-start-3 col-end-3 sm:col-end-4 md:col-end-5">
+            <div class="swiper-wrapper *:shadow overflow-y-visible">
+              <!-- Slides -->
+              <div class="swiper-slide bg-[url('assets/slides/sla-1.jpg')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/fdm-2.jpg')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/sla-3.png')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/sls-1.jpg')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/sls-3.jpg')] bg-cover bg-center rounded-lg"></div>
+            </div>
+            <!-- Buttons -->
+            <div class="swiper-button-prev gallery-1-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+            </div>
+            <div class="swiper-button-next gallery-1-next">
+              <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+            </div>
+          </div>
+
+          <div class="swiper swiper-gallery-2 w-full relative fill-gray-100 row-start-4 sm:row-start-3 md:row-start-2 row-end-6 sm:row-end-5 md:row-end-4 col-start-1 col-end-3">
+            <div class="swiper-wrapper *:shadow overflow-y-visible">
+              <!-- Slides -->
+              <div class="swiper-slide bg-[url('assets/slides/slm-1.jpg')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/slm-2.png')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/slm-3.jpg')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/slm-4.jpg')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/slm-5.png')] bg-cover bg-center rounded-lg"></div>
+            </div>
+            <!-- Buttons -->
+            <div class="swiper-button-prev gallery-2-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+            </div>
+            <div class="swiper-button-next gallery-2-next">
+              <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+            </div>
+          </div>
+
+          <div class="bg-[url(/assets/slides/slm-6.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center"></div>
+
+          <div class="bg-[url(/assets/slides/slm-7.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center"></div>
+
+          <div class="swiper swiper-gallery-3 w-full relative fill-gray-100 row-start-7 sm:row-start-5 md:row-start-4 row-end-9 sm:row-end-7 md:row-end-6 col-start-1 sm:col-start-2 col-end-3 sm:col-end-4">
+            <div class="swiper-wrapper *:shadow overflow-y-visible">
+              <!-- Slides -->
+              <div class="swiper-slide bg-[url('assets/slides/mach-4.png')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/mach-2.png')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/mach-1.png')] bg-cover bg-center rounded-lg"></div>
+              <div class="swiper-slide bg-[url('assets/slides/mach-7.png')] bg-cover bg-center rounded-lg"></div>
+            </div>
+            <!-- Buttons -->
+            <div class="swiper-button-prev gallery-3-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+            </div>
+            <div class="swiper-button-next gallery-3-next">
+              <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px""><path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z"/></svg>
+            </div>
+          </div>
+
+          <div class="bg-[url(/assets/slides/mach-5.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center"></div>
+
+          <div class="bg-[url(/assets/slides/mach-6.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center"></div>
+
+          <div class="bg-[url(/assets/slides/mach-3.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center hidden md:block"></div>
+
+          <div class="bg-[url(/assets/slides/mach-8.png)] bg-cover h-32 sm:h-40 lg:h-52 relative text-sm m-1 mt-0 shadow bg-center hidden md:block"></div>
+        </div>
+
+        <img 
+          src="assets/Ellipse 3.svg" alt="" 
+          class="w-4/5 sm:w-1/2 lg:w-2/5 absolute -z-20 opacity-60
+          -left-16 md:-left-40
+          -bottom-20 md:-bottom-32"
+        >
+
+        <img 
+          src="assets/Ellipse 2.svg" alt="" 
+          class="w-4/5 sm:w-1/2 lg:w-2/5 absolute -z-20 opacity-60
+          -right-20 sm:-right-16 md:-right-40
+          top-32 md:-top-0"
+        >
+        
+        <!-- End Grid -->
+      </div>
+    </section>
+    <!-- ========== END GALLSRY ========== -->
+
+
+<!--============ MODAL ============== -->
+    <div
+      class="fixed left-0 top-0 z-50 hidden h-screen w-screen items-center justify-center overflow-y-scroll bg-black/50 backdrop-blur-md"
+      id="modal-root"
+    >
+      <form
+        id="modal-form"
+        action=""
+        class="relative w-full md:w-2/3 lg:w-1/2 xl:w-2/5 2xl:w-[520px] flex flex-col items-center rounded-lg gap-4 bg-gray-100 p-6 sm:p-8 shadow-2xl"
+      >
+        <div class="w-full pr-10 sm:pr-0 mb-2">
+          <h3 class="sm:text-center text-2xl font-semibold opacity-80 bg-gradient-to-r from-primary to-primary-950 bg-clip-text text-transparent">
+            Оставьте заявку
+          </h3>
+          <p class="sm:text-center text-gray-600">
+            Мы свяжемся с Вами в ближайшее время.
+          </p>
+        </div>
+
+        <!-- close button -->
+        <button
+          id="close-modal"
+          type="button"
+          class="absolute rounded p-1 right-6 sm:right-8 top-6 sm:top-8 hover:bg-gray-200 size-10 flex items-center justify-center transition-all fill-gray-700"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" >
+            <path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/>
+          </svg>
+        </button>
+        
+        <div class="w-full">
+          <label for="modal-email" class="text-sm text-gray-600">E-mail</label>
+          <input
+            type="email"
+            id="modal-email"
+            name="email"
+            autocomplete="email"
+            class="w-full rounded border-transparent p-3 shadow placeholder-gray-400 focus:border-amber-400 focus-visible:border-amber-400 focus:ring-amber-400"
+            placeholder="Введите e-mail"
+          />
+        </div>
+
+        <div class="w-full">
+          <label for="modal-name" class="text-sm text-gray-600">ФИО *</label>
+          <input
+            required
+            type="text"
+            id="modal-name"
+            name="name"
+            autocomplete="name"
+            class="w-full rounded border-transparent p-3 shadow placeholder-gray-400 focus:border-amber-400 focus-visible:border-amber-400 focus:ring-amber-400"
+            placeholder="Введите ФИО"
+          />
+        </div>
+
+        <div class="w-full">
+          <label for="modal-phone" class="text-sm text-gray-600">Телефон *</label>
+          <input 
+            required
+            type="tel" 
+            id="modal-phone" 
+            name="phone" 
+            pattern=""
+            autocomplete="tel"
+            class="w-full rounded border-transparent p-3 shadow placeholder-gray-400 focus:border-amber-400 focus-visible:border-amber-400 focus:ring-amber-400"
+            placeholder="Введите номер телефона"
+          />
+        </div>
+
+        <div class="w-full">
+          <label for="hs-autoheight-textarea" class="block text-sm text-gray-600">Задача</label>
+          <textarea 
+            id="hs-autoheight-textarea" 
+            class="block w-full border-gray-200 rounded placeholder-gray-400 shadow p-3 min-h-[75px]
+            focus:border-amber-400 focus:ring-amber-400 disabled:opacity-50 disabled:pointer-events-none " 
+            rows="2" placeholder="Кратко опишите Вашу задачу"
+          ></textarea>
+        </div>
+        
+        <p class="text-gray-500 text-sm self-start">
+          * Обязательные поля
+        </p>
+
+        <input
+          type="submit"
+          class="block w-full rounded bg-primary px-5 py-3 font-medium text-white hover:opacity-80 transition-all cursor-pointer"
+          value="Отправить"
+        >
+      </form>
+
+      
+    </div>
+
+    
+    
+    <!-- up button -->
+    <button
+      class="fixed bottom-8 right-8 z-40 hidden size-14 sm:size-16 shadow shadow-primary/50
+      items-center justify-center rounded-md bg-primary  
+      transition-all hover:scale-105 hover:opacity-80 sm:bottom-10 sm:right-10 lg:size-18"
+
+      onclick="topFunction()"
+      id="up-button"
+      title="Наверх"
+    >
+      <svg 
+        class="fill-white "
+        xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+      >
+        <path d="M446.67-160v-513l-240 240L160-480l320-320 320 320-46.67 47-240-240v513h-66.66Z"/>
+      </svg>
+    </button>
+    
+    <!-- ========== CONTACTS ========== -->
+    <section 
+      id="contacts"
+      class="bg-gray-100 overflow-x-clip"
+    >
+      <div class="max-w-7xl px-6 lg:px-10 xl:px-20 2xl:px-6 py-28 sm:py-32 mx-auto relative">
+        <!-- Title -->
+        <h2 
+          class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold text-gray-500 mb-12 text-left relative z-10
+          bg-gradient-to-r opacity-80 from-primary to-primary-950 bg-clip-text text-transparent"
+        >
+          Наши <br class="block sm:hidden">контакты
+        </h2>
+        <!-- End Title -->
+
+        <!-- Image -->
+        <img 
+          src="assets/additional-comp.svg" alt="" 
+          class="w-4/5 sm:w-1/2 lg:w-2/5 absolute -z-0
+          -right-20 sm:-right-16 lg:-right-20 xl:-right-32
+          -top-0 sm:top-5 lg:top-5 xl:-top-0"
+          data-aos-anchor="#contacts"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-duration="600"
+        >
+
+        <img 
+          src="assets/Ellipse 2.svg" alt="" 
+          class="w-4/5 sm:w-1/2 lg:w-2/5 absolute -z-0 opacity-50
+          -left-16 lg:-left-10 xl:-left-20
+          bottom-0 xl:-bottom-0"
+        >
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 xl:gap-16 relative z-10">
+
+          <!--Map-->
+          <div class="shadow-md rounded-lg overflow-hidden order-2 md:order-1 h-60 md:h-auto">
+            <!-- Google -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13466.298661837383!2d30.271097075161048!3d59.88604694257319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696307e62641221%3A0xa3b6482cc0014dbc!2z0YPQuy4g0KLRgNC10YTQvtC70LXQstCwLCAy0YAsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTgwOTU!5e0!3m2!1sru!2sru!4v1716033475893!5m2!1sru!2sru"  
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              class="scale-[101%]"
+            >
+            </iframe>
+
+
+            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0d749dcce0f9b0ec13b582c04bb7853ff47712c9146b776fca6826a506e6e50a&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script> -->
+            
+            <!-- <iframe 
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A632f73215da288c9b02698d44e3a6b3de7b6fd56a72e1d14f4407193c07e0bc8&amp;source=constructor" 
+              width="100%" height="400" frameborder="0">
+            </iframe> -->
+          </div>
+
+          <!-- Text -->
+          <div 
+            id="contact-text"
+            class="flex flex-col gap-8 text-lg order-1 md:order-2"
+          >
+            <!-- Address card -->
+            <div class="flex flex-col gap-4 bg-gray-50 shadow rounded-lg p-6 font-medium mb-auto">
+                <!-- Item -->
+                <div class="flex gap-5 items-center">
+                  <span class="material-symbols-outlined text-gray-600">
+                    location_on
+                  </span>
+                  <address class="text-gray-600 not-italic">
+                    Санкт-Петербург, ул. Трефолева, 2Р
+                  </address>
+                </div>
+                <!-- End Item -->
+
+                <!-- Item -->
+                <div class="flex gap-5 items-center">
+                  <span class="material-symbols-outlined text-gray-600">
+                    mail
+                  </span>
+                  <a class="text-gray-600" href="#mailto:example@site.co" target="_blank">
+                    info@makertech.ru
+                  </a>
+                </div>
+                <!-- End Item -->
+                
+                <!-- Item -->
+                <div class="flex gap-5 items-center">
+                  <span class="material-symbols-outlined text-gray-600">
+                    call
+                  </span>
+                  <div class="text-gray-600 not-italic">
+                    +7 (911) 975-32-34
+                  </div>
+                </div>
+                <!-- End Item -->
+            </div>
+
+            <p class="text-gray-600 text-base sm:text-xl mb-4">
+              Мы всегда рады не только заказам, но и обратной связи, предложениям по улучшению наших услуг, а также пожеланиям вступить в команду!
+            </p> 
+
+            <!-- Link buttons -->
+            <div
+              id="contacts-links"
+              class="flex gap-4 md:gap-3 xl:gap-4 flex-wrap *:h-[60px]"
+            >
+              <!-- Request button -->
+              <button
+                id="open-modal-button-2"
+                class="rounded bg-primary shadow shadow-primary/50 px-6 lg:px-8 py-4 text-xl font-medium text-white transition-all hover:opacity-80 flex-grow w-full lg:w-auto text-nowrap"
+                onclick="toggleModal()"
+              >
+                Оставить заявку
+              </button>
+
+              <!-- Discord -->
+              <a
+                href="#"
+                class="group rounded w-auto lg:aspect-square flex-grow lg:flex-grow-0
+                flex items-center justify-center
+                bg-gray-50 hover:bg-gray-200 shadow"
+              >
+                <svg
+                  class="size-9 fill-gray-400 group-hover:scale-105 group-hover:fill-primary transition-all"
+                  width="50" height="54"
+                  viewBox="0 0 50 54" fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M49.091 53.5L37.3721 44.4741L38.3839 48.2H6.26271C3.30489 48.2 0.90918 45.8283 0.90918 42.9V5.8C0.90918 2.87175 3.30489 0.5 6.26271 0.5H43.7375C46.6953 0.5 49.091 2.87175 49.091 5.8V53.5ZM36.4834 15.2605C36.4834 15.2605 33.191 12.743 29.3097 12.4515L28.5067 14.068C27.3021 13.856 26.0708 13.697 25.0001 13.697C23.9026 13.697 22.6445 13.856 21.4935 14.068L20.6905 12.4515C16.6218 12.849 13.5168 15.2605 13.5168 15.2605C13.5168 15.2605 9.84958 20.5075 9.23393 30.7365C12.9279 34.9235 18.5491 34.95 18.5491 34.95L19.7001 33.413C18.5223 33.0155 17.5051 32.4855 16.4612 31.6905L16.7021 31.0545C18.6294 31.929 21.1188 32.459 25.0001 32.459C28.8814 32.459 31.3708 31.929 33.2981 31.0545L33.539 31.6905C32.495 32.4855 31.4779 33.0155 30.3001 33.413L31.4511 34.95C31.4511 34.95 37.0723 34.9235 40.7662 30.7365C40.1506 20.5075 36.4834 15.2605 36.4834 15.2605ZM19.6466 28.007C18.2546 28.007 17.1304 26.6025 17.1304 24.88C17.1304 23.1575 18.2546 21.753 19.6466 21.753C21.0385 21.753 22.1627 23.1575 22.1627 24.88C22.1627 26.6025 21.0385 28.007 19.6466 28.007ZM30.3536 28.007C28.9617 28.007 27.8375 26.6025 27.8375 24.88C27.8375 23.1575 28.9617 21.753 30.3536 21.753C31.7455 21.753 32.8698 23.1575 32.8698 24.88C32.8698 26.6025 31.7455 28.007 30.3536 28.007Z"/>
+                </svg>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="#"
+                class="group rounded w-auto lg:aspect-square flex-grow lg:flex-grow-0
+                flex items-center justify-center
+                bg-gray-50 hover:bg-gray-200 shadow"
+              >
+                <svg
+                  class="size-9 fill-gray-400 group-hover:scale-105 group-hover:fill-primary transition-all"
+                  width="64" height="52"
+                  viewBox="0 0 64 52" fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M46.6398 16.5649C48.6026 14.6328 50.5512 10.1247 42.3727 15.5989C34.7329 20.7744 27.0412 25.8755 19.2989 30.9013C18.1199 31.4261 16.8453 31.7109 15.5517 31.7385C14.2581 31.7662 12.9722 31.5362 11.7711 31.0623C6.86406 29.6133 1.13559 27.6812 1.13559 27.6812C1.13559 27.6812 -2.77584 25.2627 3.91982 22.6866C3.91982 22.6866 32.2279 11.2517 42.0456 7.22311C45.8077 5.61306 58.5696 0.460902 58.5696 0.460902C58.5696 0.460902 64.4617 -1.79667 63.971 3.681C63.8074 5.93507 62.4988 13.8313 61.1903 22.3646C59.2239 34.4435 57.0975 47.6529 57.0975 47.6529C57.0975 47.6529 56.7704 51.356 53.9897 52C51.013 51.9504 48.137 50.9313 45.8113 49.1019C45.157 48.6189 33.54 41.3702 29.2837 37.8281C28.8507 37.5394 28.499 37.1476 28.2611 36.6891C28.0233 36.2306 27.9072 35.7204 27.9235 35.2059C27.9398 34.6914 28.0881 34.1893 28.3545 33.7463C28.6209 33.3034 28.9968 32.9339 29.4472 32.6724C35.2851 27.415 41.017 22.0448 46.6398 16.5649Z"/>
+                </svg>
+              </a>
+
+              <!-- Phone -->
+              <a
+                href="#"
+                class="group rounded w-auto lg:aspect-square flex-grow lg:flex-grow-0
+                flex items-center justify-center
+                bg-gray-50 hover:bg-gray-200 shadow"
+              >
+                <svg
+                  class="size-9 fill-gray-400 group-hover:scale-105 group-hover:fill-primary transition-all"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40px" viewBox="0 -960 960 960" width="40px"
+                >
+                  <path d="M771.33-485.33q-3.33-119.89-86.69-203.2-83.36-83.32-203.31-86.66V-842q73.67 1.33 137.84 29.83 64.16 28.5 112.33 76.67t76.67 112.33Q836.67-559 838-485.33h-66.67Zm-166.66 0q-3.34-50-38.34-84.67t-85-38v-66.67q77.67 3.34 132.17 57.5Q668-563 671.33-485.33h-66.66ZM796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.67 12.67-31.33Q145.33-840 164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806L376-675.33q2 14.66-.67 26Q372.67-638 364.67-630l-99 100q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.16-14.5 13.5-4.17 26.84-2.17L806-349.33q14.67 4 24.33 15.5Q840-322.33 840-308v144q0 18.67-12.67 31.33Q814.67-120 796-120Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End Grid -->
+      </div>
+    </section>
+    <!-- ========== END CONTACTS ========== -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-white">
+      <div class="relative max-w-7xl py-10 lg:py-16 px-6 lg:px-10 xl:px-20 2xl:px-6 overflow-hidden mx-auto z-20">
+        <!-- Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 grid-rows-2 sm:grid-rows-1
+          gap-10 md:gap-16 mb-10 z-10 max-w-7xl"
+        >
+          <div class="col-span-1">
+            <img src="assets/full-logo.svg" alt="" 
+              data-aos="fade-zoom-in"
+              data-aos-delay="0"
+              data-aos-once="true"
+              data-aos-duration="400"
+            >
+        
+            <p class="mt-6 text-gray-600">© 2024 МэйкерТех.</p>
+          </div>
+          <!-- End Col -->
+
+          <div
+            class="flex flex-col gap-2 col-span-1
+            *:font-medium *:text-gray-500 hover:*:text-gray-900 *:rounded *:px-4 *:py-2 hover:*:bg-gray-200/50"
+          >
+            <a class="" href="#about">О нас</a>
+            <a class="" href="#services">Возможности</a>
+            <a class="" href="#gallery">Галерея</a>
+            <a class="" href="#contacts">Контакты</a>
+          </div>
+
+          <!-- End Col -->
+          <div class="flex flex-row md:flex-col gap-4 col-span-1">
+            <a href="#" class="group">
+              <svg
+                class="size-9 fill-gray-400 group-hover:scale-105 group-hover:fill-primary transition-all"
+                width="50" height="54"
+                viewBox="0 0 50 54" fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M49.091 53.5L37.3721 44.4741L38.3839 48.2H6.26271C3.30489 48.2 0.90918 45.8283 0.90918 42.9V5.8C0.90918 2.87175 3.30489 0.5 6.26271 0.5H43.7375C46.6953 0.5 49.091 2.87175 49.091 5.8V53.5ZM36.4834 15.2605C36.4834 15.2605 33.191 12.743 29.3097 12.4515L28.5067 14.068C27.3021 13.856 26.0708 13.697 25.0001 13.697C23.9026 13.697 22.6445 13.856 21.4935 14.068L20.6905 12.4515C16.6218 12.849 13.5168 15.2605 13.5168 15.2605C13.5168 15.2605 9.84958 20.5075 9.23393 30.7365C12.9279 34.9235 18.5491 34.95 18.5491 34.95L19.7001 33.413C18.5223 33.0155 17.5051 32.4855 16.4612 31.6905L16.7021 31.0545C18.6294 31.929 21.1188 32.459 25.0001 32.459C28.8814 32.459 31.3708 31.929 33.2981 31.0545L33.539 31.6905C32.495 32.4855 31.4779 33.0155 30.3001 33.413L31.4511 34.95C31.4511 34.95 37.0723 34.9235 40.7662 30.7365C40.1506 20.5075 36.4834 15.2605 36.4834 15.2605ZM19.6466 28.007C18.2546 28.007 17.1304 26.6025 17.1304 24.88C17.1304 23.1575 18.2546 21.753 19.6466 21.753C21.0385 21.753 22.1627 23.1575 22.1627 24.88C22.1627 26.6025 21.0385 28.007 19.6466 28.007ZM30.3536 28.007C28.9617 28.007 27.8375 26.6025 27.8375 24.88C27.8375 23.1575 28.9617 21.753 30.3536 21.753C31.7455 21.753 32.8698 23.1575 32.8698 24.88C32.8698 26.6025 31.7455 28.007 30.3536 28.007Z"/>
+              </svg>
+            </a>
+        
+            <a href="#" class="group">
+              <svg
+                class="size-9 fill-gray-400 group-hover:scale-105 group-hover:fill-primary transition-all"
+                width="64" height="52"
+                viewBox="0 0 64 52" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.6398 16.5649C48.6026 14.6328 50.5512 10.1247 42.3727 15.5989C34.7329 20.7744 27.0412 25.8755 19.2989 30.9013C18.1199 31.4261 16.8453 31.7109 15.5517 31.7385C14.2581 31.7662 12.9722 31.5362 11.7711 31.0623C6.86406 29.6133 1.13559 27.6812 1.13559 27.6812C1.13559 27.6812 -2.77584 25.2627 3.91982 22.6866C3.91982 22.6866 32.2279 11.2517 42.0456 7.22311C45.8077 5.61306 58.5696 0.460902 58.5696 0.460902C58.5696 0.460902 64.4617 -1.79667 63.971 3.681C63.8074 5.93507 62.4988 13.8313 61.1903 22.3646C59.2239 34.4435 57.0975 47.6529 57.0975 47.6529C57.0975 47.6529 56.7704 51.356 53.9897 52C51.013 51.9504 48.137 50.9313 45.8113 49.1019C45.157 48.6189 33.54 41.3702 29.2837 37.8281C28.8507 37.5394 28.499 37.1476 28.2611 36.6891C28.0233 36.2306 27.9072 35.7204 27.9235 35.2059C27.9398 34.6914 28.0881 34.1893 28.3545 33.7463C28.6209 33.3034 28.9968 32.9339 29.4472 32.6724C35.2851 27.415 41.017 22.0448 46.6398 16.5649Z"/>
+              </svg>
+            </a>
+          </div>
+        
+        </div>
+        <!-- End Grid -->
+        <img
+          src="assets/footer-comp.svg"
+          alt=""
+          class="absolute w-[400px] lg:w-[600px] -right-40 sm:-right-20 -bottom-0 sm:-bottom-40 lg:-bottom-64 -z-10"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="600"
+        >
+      </div>
+
+    </footer> 
+    <!-- ========== END FOOTER ========== -->
+
+    <!-- Scripts -->
+    <script src="dist/preline.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
