@@ -1,22 +1,3 @@
-//--------- show dropdown nav menu
-// let dropdownBtn = document.getElementById("dropdown-button");
-// let navMenu = document.getElementById("nav-menu");
-// dropdownBtn.addEventListener('mouseenter', showDropdown);
-// navMenu.addEventListener('mouseleave', hideDropdown);
-// //prevent closing when clicking in dropdown
-// dropdownBtn.addEventListener('click', preventAction);
-// // navMenu.addEventListener('click', preventAction);
-
-// //hide on outside click
-// let mainBody = document.getElementById("mainBody");
-// mainBody.addEventListener('click', hideDropdown);
-
-// function showDropdown() {
-//   navMenu.classList.remove("hidden");
-// }
-// function hideDropdown() {
-//   navMenu.classList.add("hidden");
-// }
 AOS.init();
 
 //--------- modal toggle
@@ -24,7 +5,7 @@ let modalRoot = document.getElementById('modal-root');
 let modalForm = document.getElementById('modal-form');
 let closeModal = document.getElementById('close-modal');
 let openModal = document.getElementById('open-modal-button');
-//check later!!!!
+
 modalRoot.addEventListener('click', toggleModal);
 modalForm.addEventListener('click', preventAction);
 closeModal.addEventListener('click', toggleModal);
@@ -78,25 +59,7 @@ function setActiveTab(tabID) {
   document.getElementById("tabs-with-card-item-" + tabID).classList.add('active');
 }
 
-//stop parallax on mobile devices
-// function parallaxToggle(){
-//   if(window.innerWidth > 1023){
-//     document.querySelectorAll(".parallax-image").forEach((element) => {
-//       element.classList.add('mouse');
-//     });
-//     } else {
-//     document.querySelectorAll(".parallax-image").forEach((element) => {
-//       element.classList.remove('mouse');
-//     });
-//   }
-// }
-// window.addEventListener('resize', parallaxToggle);
-// window.addEventListener('pageshow', parallaxToggle);
-
-
-
 ///autoheight textarea in modal form
-//from Preline
 (function () {
   function textareaAutoHeight(el, offsetTop = 0) {
     el.style.height = 'auto';
@@ -125,7 +88,7 @@ function setActiveTab(tabID) {
   })();
 })()
 
-
+//Swipers settings
 var sliderFDM = new Swiper(".swiper-modal-1", {
   slidesPerView: 1,
   spaceBetween: 20,
